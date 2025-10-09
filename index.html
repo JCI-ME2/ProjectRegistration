@@ -96,13 +96,14 @@ textarea:focus {
 }
 
 .add-row-btn {
-    background-color: #198754;
+     background: #0d6efd;
+    color: #fff;
     border-radius: 6px;
       margin-bottom: 10px;
 }
 
 .add-row-btn:hover {
-    background-color: #157347;
+    background-color: #0b5ed7;
   
 }
 
@@ -121,6 +122,7 @@ textarea:focus {
     padding: 14px 18px;
     border-radius: 8px;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .success {
@@ -273,7 +275,7 @@ textarea::placeholder {
                         <tr>
                             <th></th>
                             <th>End User</th>
-                            <th>Contractor</th>
+                            <th>Contractor/Distributor</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -426,7 +428,7 @@ textarea::placeholder {
                     <input type="number" id="approximateValue" name="approximateValue" min="0" step="0.01">
                 </div>
             </div>
-             <div id="message" class="message"></div>
+             <div id="message" class="message" style="display:none;"></div>
             <button type="submit" class="submit-btn">Submit Registration</button>
             
         </form>
@@ -465,9 +467,9 @@ document.addEventListener('DOMContentLoaded', function () {
     e.preventDefault();
 
     // Clear previous messages
-    messageDiv.style.display = 'none';
-    messageDiv.className = 'message';
-    messageDiv.textContent = '';
+    messageDiv.innerHTML = '✅ Form submitted successfully! Email sent.';
+    messageDiv.className = 'message success';
+    messageDiv.style.display = 'block';
     document.querySelectorAll('input, textarea').forEach(f => f.style.borderColor = '#ddd');
 
     let valid = true;
@@ -503,41 +505,91 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Collect form data
-    const data = {
-      yourName: form.yourName.value,
-      yourEmail: form.yourEmail.value,
-      projectName: form.projectName.value,
-      registrationReason: form.registrationReason.value,
-      approximateValue: form.approximateValue.value,
-      endUserCompany: form.endUserCompany.value,
-      endUserContact: form.endUserContact.value,
-      endUserPhone: form.endUserPhone.value,
-      endUserEmail: form.endUserEmail.value,
-      endUserCity: form.endUserCity.value,
-      contractorCompany: form.contractorCompany.value,
-      contractorContact: form.contractorContact.value,
-      contractorPhone: form.contractorPhone.value,
-      contractorEmail: form.contractorEmail.value,
-      contractorCity: form.contractorCity.value,
-      partnerCompany: form.partnerCompany.value,
-      partnerContact: form.partnerContact.value,
-      partnerPhone: form.partnerPhone.value,
-      partnerEmail: form.partnerEmail.value,
-      partnerCity: form.partnerCity.value,
-      brands: Array.from(document.querySelectorAll('input[name="brands"]:checked')).map(cb => cb.value).join(', '),
-      models: Array.from(document.querySelectorAll('input[name="modelNumber[]"]'))
-        .map((input, i) => input.value ? `${input.value} (Qty: ${document.querySelectorAll('input[name="quantity[]"]')[i].value || 1})` : '')
-        .filter(Boolean).join('; '),
-      projectDescription: form.projectDescription.value
-    };
+    const models_table = (() => {
+  const models = Array.from(document.querySelectorAll('input[name="modelNumber[]"]'));
+  const quantities = Array.from(document.querySelectorAll('input[name="quantity[]"]'));
+
+  const rows = models.map((input, i) => {
+    const model = input.value.trim();
+    const qty = quantities[i]?.value.trim() || '1';
+    if (!model) return '';
+    return `<tr>
+      <td>${model}</td>
+      <td>${qty}</td>
+    </tr>`;
+  }).filter(Boolean).join('');
+
+  return `<table border="1" cellpadding="5" cellspacing="0" style="border-collapse:collapse;width:100%;font-family:Arial,sans-serif;">
+    <thead style="background-color:#f2f2f2;">
+      <tr>
+        <th>Model Number</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${rows}
+    </tbody>
+  </table>`;
+})();
+
+
+
+   const data = {
+  yourName: form.yourName.value,
+  yourEmail: form.yourEmail.value,
+  projectName: form.projectName.value,
+  registrationReason: form.registrationReason.value,
+  approximateValue: form.approximateValue.value,
+  endUserCompany: form.endUserCompany.value,
+  endUserContact: form.endUserContact.value,
+  endUserPhone: form.endUserPhone.value,
+  endUserEmail: form.endUserEmail.value,
+  endUserCity: form.endUserCity.value,
+  contractorCompany: form.contractorCompany.value,
+  contractorContact: form.contractorContact.value,
+  contractorPhone: form.contractorPhone.value,
+  contractorEmail: form.contractorEmail.value,
+  contractorCity: form.contractorCity.value,
+  partnerCompany: form.partnerCompany.value,
+  partnerContact: form.partnerContact.value,
+  partnerPhone: form.partnerPhone.value,
+  partnerEmail: form.partnerEmail.value,
+  partnerCity: form.partnerCity.value,
+  brands: Array.from(document.querySelectorAll('input[name="brands"]:checked')).map(cb => cb.value).join(', '),
+ models_table: models_table,
+  projectDescription: form.projectDescription.value
+};
+
+  // Build HTML table for email
+ 
+
+  
 
     // Send email using EmailJS
     emailjs.send("service_dpvfggs", "template_elqtxkm", data)
       .then(function (response) {
-        console.log('SUCCESS!', response);
-        messageDiv.textContent = '✅ Form submitted successfully! Email sent.';
-        messageDiv.className = 'message success';
-        messageDiv.style.display = 'block';
+    console.log('SUCCESS!', response);
+    messageDiv.innerHTML = '✅ Form submitted successfully! Email sent.';
+    messageDiv.className = 'message success';
+    messageDiv.style.display = 'block';
+    form.reset();
+
+    // Reset model table to single empty row
+    modelTableBody.innerHTML = `
+      <tr>
+        <td><input type="text" name="modelNumber[]" required></td>
+        <td><input type="number" name="quantity[]" min="1"></td>
+        <td><button type="button" class="remove-row-btn">Remove</button></td>
+      </tr>
+    `;
+  })
+  .catch(function (error) {
+    console.log('FAILED...', error);
+    messageDiv.innerHTML = '❌ Failed to submit form. Error: ' + (error.text || error);
+    messageDiv.className = 'message error';
+    messageDiv.style.display = 'block';
+  });
+
         form.reset();
 
         // Reset model table to single empty row
@@ -556,7 +608,7 @@ document.addEventListener('DOMContentLoaded', function () {
         messageDiv.style.display = 'block';
       });
   });
-});
+
 </script>
 
 
