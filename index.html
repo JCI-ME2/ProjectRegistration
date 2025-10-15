@@ -407,17 +407,22 @@ textarea::placeholder {
                     <table id="modelTable">
                         <thead>
                             <tr>
+
                               
                                 <th>Quantity</th>
                                 <th>Model Number</th>
+
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
+
                                 
                                 <td><input type="number" name="quantity[]" min="1"></td>
                                 <td><input type="text" name="modelNumber[]" required></td>
+
+                               
                                 <td><button type="button" class="remove-row-btn">Remove</button></td>
                             </tr>
                         </tbody>
@@ -447,9 +452,11 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('addModelRow').addEventListener('click', () => {
     const newRow = document.createElement('tr');
     newRow.innerHTML = `
+
      
       <td><input type="number" name="quantity[]" min="1"></td>
        <td><input type="text" name="modelNumber[]" required></td>
+
       <td><button type="button" class="remove-row-btn">Remove</button></td>
     `;
     modelTableBody.appendChild(newRow);
@@ -509,6 +516,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Collect form data
     const models_table = (() => {
+
   
   const quantities = Array.from(document.querySelectorAll('input[name="quantity[]"]'))
   const models = Array.from(document.querySelectorAll('input[name="modelNumber[]"]'));
@@ -522,15 +530,18 @@ document.addEventListener('DOMContentLoaded', function () {
       
       <td>${qty}</td>
       <td>${model}</td>
+
     </tr>`;
   }).filter(Boolean).join('');
 
   return `<table border="1" cellpadding="5" cellspacing="0" style="border-collapse:collapse;width:100%;font-family:Arial,sans-serif;">
     <thead style="background-color:#f2f2f2;">
       <tr>
+
        
         <th>Quantity</th>
          <th>Model Number</th>
+
       </tr>
     </thead>
     <tbody>
