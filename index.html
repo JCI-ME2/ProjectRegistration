@@ -267,6 +267,31 @@ textarea::placeholder {
                 </div>
             </div>
 
+              <!-- Partner Information Section -->
+            <h4>Partner Information</h4>
+            <div class="form-section">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Contact Person</td>
+                            <td><input type="text" name="partnerContact" placeholder="required" required></td>
+                        </tr>
+                        <tr>
+                            <td>Phone Number</td>
+                            <td><input type="tel" name="partnerPhone" placeholder="required" required></td>
+                        </tr>
+
+                        <tr>
+                            <td>City</td>
+                            <td><input type="text" name="partnerCity" placeholder="required" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+ 
+
+            </div>
+
             <!-- Customer Information Section -->
             <h4>Customer Information</h4>
             <div class="form-section">
@@ -308,69 +333,7 @@ textarea::placeholder {
                 </table>
             </div>
 
-            <!-- Partner Information Section -->
-            <h4>Partner Information</h4>
-            <div class="form-section">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Company Name</td>
-                            <td><input type="text" name="partnerCompany" placeholder="required" required></td>
-                        </tr>
-                        <tr>
-                            <td>Contact Person</td>
-                            <td><input type="text" name="partnerContact" placeholder="required" required></td>
-                        </tr>
-                        <tr>
-                            <td>Phone Number</td>
-                            <td><input type="tel" name="partnerPhone" placeholder="required" required></td>
-                        </tr>
-                        <tr>
-                            <td>E-mail</td>
-                            <td><input type="email" name="partnerEmail" placeholder="required" required></td>
-                        </tr>
-                        <tr>
-                            <td>City</td>
-                            <td><input type="text" name="partnerCity" placeholder="required" required></td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <div class="form-group">
-    <h4 >Brands <span>*</span></h4>
-    <div class="checkbox-group radio-style">
-        <div class="checkbox-item">
-            <input type="checkbox" id="illustra" name="brands" value="Illustra">
-            <label for="illustra">Illustra</label>
-        </div>
-        <div class="checkbox-item">
-            <input type="checkbox" id="exacq" name="brands" value="Exacq">
-            <label for="exacq">Exacq</label>
-        </div>
-        <div class="checkbox-item">
-            <input type="checkbox" id="americanDynamics" name="brands" value="American Dynamics">
-            <label for="americanDynamics">American Dynamics</label>
-        </div>
-        <div class="checkbox-item">
-            <input type="checkbox" id="kantech" name="brands" value="Kantech">
-            <label for="kantech">Kantech</label>
-        </div>
-        <div class="checkbox-item">
-            <input type="checkbox" id="softwareHouse" name="brands" value="Software House">
-            <label for="softwareHouse">Software House</label>
-        </div>
-        <div class="checkbox-item">
-            <input type="checkbox" id="cemSystems" name="brands" value="CEM systems">
-            <label for="cemSystems">CEM systems</label>
-        </div>
-        <div class="checkbox-item">
-            <input type="checkbox" id="Accessories" name="brands" value="Accessories">
-            <label for="Accessories">Accessories</label>
-        </div>
-    </div>
-</div>
-
-            </div>
+          
 
             <!-- Project Registration Reason Section -->
             <h4>Why do you want project registration</h4>
@@ -392,7 +355,40 @@ textarea::placeholder {
                 </div>
             </div>
 
+               <div class="form-group">
+    <h4 >Brands <span>*</span></h4>
+    <div class="checkbox-group radio-style">
+        <div class="checkbox-item">
+            <input type="checkbox" id="illustra" name="brands" value="Illustra">       
+            <a href="https://illustracameras.com" for="illustra"  target="_blank" >Illustra</a>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="exacq" name="brands" value="Exacq">
+           <a href="https://www.exacq.com" for="exacq"  target="_blank" >Exacq</a>
 
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="americanDynamics" name="brands" value="American Dynamics">
+            <a href="https://www.americandynamics.net" for="americanDynamics"  target="_blank" >American Dynamics</a>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="kantech" name="brands" value="Kantech">
+            <a href="https://www.kantech.com" for="kantech"  target="_blank" >Kantech</a>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="softwareHouse" name="brands" value="Software House">
+            <a href="https://www.swhouse.com" for="softwareHouse"  target="_blank" >Software House</a>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="cemSystems" name="brands" value="CEM systems">
+            <a href="https://www.cemsys.com" for="cemSystems"  target="_blank" >CEM systems</a>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="Accessories" name="brands" value="Accessories">
+            <label for="Accessories">Accessories</label>
+        </div>
+    </div>
+</div>
 
             <!-- Project Details Section -->
             <h4>Project Details</h4>
@@ -568,10 +564,8 @@ document.addEventListener('DOMContentLoaded', function () {
   contractorPhone: form.contractorPhone.value,
   contractorEmail: form.contractorEmail.value,
   contractorCity: form.contractorCity.value,
-  partnerCompany: form.partnerCompany.value,
   partnerContact: form.partnerContact.value,
   partnerPhone: form.partnerPhone.value,
-  partnerEmail: form.partnerEmail.value,
   partnerCity: form.partnerCity.value,
   brands: Array.from(document.querySelectorAll('input[name="brands"]:checked')).map(cb => cb.value).join(', '),
  models_table: models_table,

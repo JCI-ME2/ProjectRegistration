@@ -1,0 +1,2300 @@
+[
+  {
+    "E-SPE-V8": "E-SPE-LIC"
+  },
+  {
+    "E-SPE-V8": "E-SPE-UPG-V6-LIC"
+  },
+  {
+    "E-SPE-V8": "E-SPE-GLY"
+  },
+  {
+    "E-SPE-V8": "E-SPE-DOOR-1"
+  },
+  {
+    "E-SPE-V8": "E-SPE-DOOR-4"
+  },
+  {
+    "E-SPE-V8": "E-SPE-DOOR-8"
+  },
+  {
+    "E-SPE-V8": "E-SPE-DOOR-24"
+  },
+  {
+    "E-SPE-V8": "E-SPE-DOOR-48"
+  },
+  {
+    "E-SPE-V8": "E-SPE-DOOR-96"
+  },
+  {
+    "E-SPE-V8": "E-SPE-KTK-1"
+  },
+  {
+    "E-SPE-V8": "E-COR-V8"
+  },
+  {
+    "E-SPE-V8": "E-COR-LIC"
+  },
+  {
+    "E-SPE-V8": "E-COR-UPG-V6-LIC"
+  },
+  {
+    "E-SPE-V8": "E-COR-WS1"
+  },
+  {
+    "E-SPE-V8": "E-COR-WS6"
+  },
+  {
+    "E-SPE-V8": "E-COR-COM"
+  },
+  {
+    "E-SPE-V8": "E-COR-CONNECT"
+  },
+  {
+    "E-SPE-V8": "E-COR-GLY"
+  },
+  {
+    "E-SPE-V8": "E-COR-RDN"
+  },
+  {
+    "E-SPE-V8": "E-COR-LDAP"
+  },
+  {
+    "E-SPE-V8": "E-COR-SQL"
+  },
+  {
+    "E-SPE-V8": "E-COR-VVM"
+  },
+  {
+    "E-SPE-V8": "E-COR-WEB-1"
+  },
+  {
+    "E-SPE-V8": "E-COR-WEB-3"
+  },
+  {
+    "E-SPE-V8": "E-COR-WEB-10"
+  },
+  {
+    "E-SPE-V8": "E-COR-WEB-25"
+  },
+  {
+    "E-SPE-V8": "E-COR-DVR-1"
+  },
+  {
+    "E-SPE-V8": "E-COR-DOOR-1"
+  },
+  {
+    "E-SPE-V8": "E-COR-DOOR-4"
+  },
+  {
+    "E-SPE-V8": "E-COR-DOOR-8"
+  },
+  {
+    "E-SPE-V8": "E-COR-DOOR-24"
+  },
+  {
+    "E-SPE-V8": "E-COR-DOOR-48"
+  },
+  {
+    "E-SPE-V8": "E-COR-DOOR-96"
+  },
+  {
+    "E-SPE-V8": "E-COR-PASS-10"
+  },
+  {
+    "E-SPE-V8": "E-COR-PASS-50"
+  },
+  {
+    "E-SPE-V8": "E-COR-PASS-100"
+  },
+  {
+    "E-SPE-V8": "E-COR-PASS-500"
+  },
+  {
+    "E-SPE-V8": "E-COR-KTK-1"
+  },
+  {
+    "E-SPE-V8": "E-COR-KTK-2"
+  },
+  {
+    "E-SPE-V8": "E-COR-KTK-3"
+  },
+  {
+    "E-SPE-V8": "E-COR-KTK-5"
+  },
+  {
+    "E-SPE-V8": "E-COR-KTK-10"
+  },
+  {
+    "E-SPE-V8": "E-GLO-V8"
+  },
+  {
+    "E-SPE-V8": "E-GLO-LIC"
+  },
+  {
+    "E-SPE-V8": "E-GLO-UPG-V6-LIC"
+  },
+  {
+    "E-SPE-V8": "E-GLO-WS1"
+  },
+  {
+    "E-SPE-V8": "E-GLO-WS8"
+  },
+  {
+    "E-SPE-V8": "E-GLO-COM-WIN"
+  },
+  {
+    "E-SPE-V8": "E-GLO-CORCOM"
+  },
+  {
+    "E-SPE-V8": "E-GLO-CONNECT"
+  },
+  {
+    "E-SPE-V8": "E-GLO-CORCOMRDN"
+  },
+  {
+    "E-SPE-V8": "E-GLO-GLY"
+  },
+  {
+    "E-SPE-V8": "E-GLO-RDN"
+  },
+  {
+    "E-SPE-V8": "E-GLO-LDAP"
+  },
+  {
+    "E-SPE-V8": "E-GLO-SQL"
+  },
+  {
+    "E-SPE-V8": "E-GLO-VVM"
+  },
+  {
+    "E-SPE-V8": "E-GLO-WEB-1"
+  },
+  {
+    "E-SPE-V8": "E-GLO-WEB-3"
+  },
+  {
+    "E-SPE-V8": "E-GLO-WEB-10"
+  },
+  {
+    "E-SPE-V8": "E-GLO-WEB-25"
+  },
+  {
+    "E-SPE-V8": "E-GLO-WEB-50"
+  },
+  {
+    "E-SPE-V8": "E-GLO-DVR-1"
+  },
+  {
+    "E-SPE-V8": "E-GLO-DVR-UNL"
+  },
+  {
+    "E-SPE-V8": "E-GLO-DOOR-1"
+  },
+  {
+    "E-SPE-V8": "E-GLO-DOOR-4"
+  },
+  {
+    "E-SPE-V8": "E-GLO-DOOR-8"
+  },
+  {
+    "E-SPE-V8": "E-GLO-DOOR-24"
+  },
+  {
+    "E-SPE-V8": "E-GLO-DOOR-48"
+  },
+  {
+    "E-SPE-V8": "E-GLO-DOOR-96"
+  },
+  {
+    "E-SPE-V8": "E-GLO-PASS-10"
+  },
+  {
+    "E-SPE-V8": "E-GLO-PASS-50"
+  },
+  {
+    "E-SPE-V8": "E-GLO-PASS-100"
+  },
+  {
+    "E-SPE-V8": "E-GLO-PASS-500"
+  },
+  {
+    "E-SPE-V8": "E-GLO-KTK-1"
+  },
+  {
+    "E-SPE-V8": "E-GLO-KTK-2"
+  },
+  {
+    "E-SPE-V8": "E-GLO-KTK-3"
+  },
+  {
+    "E-SPE-V8": "E-GLO-KTK-5"
+  },
+  {
+    "E-SPE-V8": "E-GLO-KTK-10"
+  },
+  {
+    "E-SPE-V8": "E-GLO-KTK-20"
+  },
+  {
+    "E-SPE-V8": "KT-NCC-EU-G2"
+  },
+  {
+    "E-SPE-V8": "KT-NCC-PCB-G2"
+  },
+  {
+    "E-SPE-V8": "KT-1-EU-PC"
+  },
+  {
+    "E-SPE-V8": "KT-1-EU-MET"
+  },
+  {
+    "E-SPE-V8": "KT-1-EU-MET-POE"
+  },
+  {
+    "E-SPE-V8": "KT-1"
+  },
+  {
+    "E-SPE-V8": "KT-1-M"
+  },
+  {
+    "E-SPE-V8": "KT-MOD-IO16"
+  },
+  {
+    "E-SPE-V8": "KT-1-PCB"
+  },
+  {
+    "E-SPE-V8": "KT-1-CAB-P"
+  },
+  {
+    "E-SPE-V8": "KT-1-CAB-M"
+  },
+  {
+    "E-SPE-V8": "KT-1-CAB-PSU"
+  },
+  {
+    "E-SPE-V8": "KT-1-CAB-POE"
+  },
+  {
+    "E-SPE-V8": "BAW50T12"
+  },
+  {
+    "E-SPE-V8": "KT-1-CVR"
+  },
+  {
+    "E-SPE-V8": "KT-1-PCB-BP"
+  },
+  {
+    "E-SPE-V8": "KT-2-EU-MET "
+  },
+  {
+    "E-SPE-V8": "KT-2-CAB-PSU"
+  },
+  {
+    "E-SPE-V8": "KT-2-PCB-EU"
+  },
+  {
+    "E-SPE-V8": "KT-2-BP"
+  },
+  {
+    "E-SPE-V8": "KT-2-MP"
+  },
+  {
+    "E-SPE-V8": "KT-4-EU"
+  },
+  {
+    "E-SPE-V8": "KT-4-POE"
+  },
+  {
+    "E-SPE-V8": "KT-4-PCB"
+  },
+  {
+    "E-SPE-V8": "KT-4-MOD-PoE"
+  },
+  {
+    "E-SPE-V8": "KT-4-MOD-WiFi"
+  },
+  {
+    "E-SPE-V8": "KT-4-CABEU"
+  },
+  {
+    "E-SPE-V8": "KT-4-CAB"
+  },
+  {
+    "E-SPE-V8": "KT-CON"
+  },
+  {
+    "E-SPE-V8": "KT-ACC"
+  },
+  {
+    "E-SPE-V8": "TR16100-240V"
+  },
+  {
+    "E-SPE-V8": "KT-400-EU"
+  },
+  {
+    "E-SPE-V8": "KT-400-PCB"
+  },
+  {
+    "E-SPE-V8": "KT-400-CABEU"
+  },
+  {
+    "E-SPE-V8": "KT-400-CON"
+  },
+  {
+    "E-SPE-V8": "TR16100-240V"
+  },
+  {
+    "E-SPE-V8": "KT-MOD-INP16"
+  },
+  {
+    "E-SPE-V8": "KT-MOD-OUT16"
+  },
+  {
+    "E-SPE-V8": "KT-MOD-REL8"
+  },
+  {
+    "E-SPE-V8": "KT-MOD-SPI-16"
+  },
+  {
+    "E-SPE-V8": "KT-MOD-SPI-36"
+  },
+  {
+    "E-SPE-V8": "KT-MOD-CABEU"
+  },
+  {
+    "E-SPE-V8": "KT-IP"
+  },
+  {
+    "E-SPE-V8": "KT-IP-PCB"
+  },
+  {
+    "E-SPE-V8": "KT-IP-CAB"
+  },
+  {
+    "E-SPE-V8": "VC-485"
+  },
+  {
+    "E-SPE-V8": "USB-485"
+  },
+  {
+    "E-SPE-V8": "CBLK-IT100"
+  },
+  {
+    "E-SPE-V8": "CBLK-ITV2"
+  },
+  {
+    "E-SPE-V8": "CBLK-4401VK"
+  },
+  {
+    "E-SPE-V8": "KT-4401VK"
+  },
+  {
+    "E-SPE-V8": "KT-TAMPER"
+  },
+  {
+    "E-SPE-V8": "KT-RM1"
+  },
+  {
+    "E-SPE-V8": "KT-LOCK"
+  },
+  {
+    "E-SPE-V8": "KT-MUL-SC2"
+  },
+  {
+    "E-SPE-V8": "KT-MUL-SC-KP2"
+  },
+  {
+    "E-SPE-V8": "KT-MUL-MT2"
+  },
+  {
+    "E-SPE-V8": "KT-MUL-MT-KP2"
+  },
+  {
+    "E-SPE-V8": "KT-SG-SC2"
+  },
+  {
+    "E-SPE-V8": "KT-SG-SC-KP2"
+  },
+  {
+    "E-SPE-V8": "KT-SG-MT2"
+  },
+  {
+    "E-SPE-V8": "KT-SG-MT-KP2"
+  },
+  {
+    "E-SPE-V8": "KT-IO-OSDP-P13"
+  },
+  {
+    "E-SPE-V8": "MFP-2KSHL"
+  },
+  {
+    "E-SPE-V8": "MFP-2KDYE"
+  },
+  {
+    "E-SPE-V8": "MFP-2KDYE-COM"
+  },
+  {
+    "E-SPE-V8": "MFP-2KKEY"
+  },
+  {
+    "E-SPE-V8": "MT-2KDYE"
+  },
+  {
+    "E-SPE-V8": "P225XSF"
+  },
+  {
+    "E-SPE-V8": "P225KPXSF"
+  },
+  {
+    "E-SPE-V8": "P325XSF"
+  },
+  {
+    "E-SPE-V8": "P325KPXSF"
+  },
+  {
+    "E-SPE-V8": "P225W26"
+  },
+  {
+    "E-SPE-V8": "P225KPW26"
+  },
+  {
+    "E-SPE-V8": "P325W26"
+  },
+  {
+    "E-SPE-V8": "P325KPW26"
+  },
+  {
+    "E-SPE-V8": "P225-COVER"
+  },
+  {
+    "E-SPE-V8": "P225KP-COVER"
+  },
+  {
+    "E-SPE-V8": "P325-COVER"
+  },
+  {
+    "E-SPE-V8": "P325KP-COVER"
+  },
+  {
+    "E-SPE-V8": "P10SHL"
+  },
+  {
+    "E-SPE-V8": "P20DYE"
+  },
+  {
+    "E-SPE-V8": "P30DMG"
+  },
+  {
+    "E-SPE-V8": "P40KEY"
+  },
+  {
+    "E-SPE-V8": "P50TAG"
+  },
+  {
+    "E-SPE-V8": "20TKS-00-001U5R"
+  },
+  {
+    "E-SPE-V8": "20KTKS-00-001U5R"
+  },
+  {
+    "E-SPE-V8": "40TKS-00-001U5R"
+  },
+  {
+    "E-SPE-V8": "40KTKS-00-001U5R"
+  },
+  {
+    "E-SPE-V8": "SH-C1"
+  },
+  {
+    "E-SPE-V8": "SH-CMG3/GG"
+  },
+  {
+    "E-SPE-V8": "SH-CMG4/GG"
+  },
+  {
+    "E-SPE-V8": "SH-K1"
+  },
+  {
+    "E-SPE-V8": "T.REX-LT"
+  },
+  {
+    "E-SPE-V8": "T.REX-LT-NL"
+  },
+  {
+    "E-SPE-V8": "TREX-LT2"
+  },
+  {
+    "E-SPE-V8": "T.REX-LT2-NL"
+  },
+  {
+    "E-SPE-V8": "T.REX-XL"
+  },
+  {
+    "E-SPE-V8": "T.REX-XL-NL"
+  },
+  {
+    "E-SPE-V8": "TREX-XL2"
+  },
+  {
+    "E-SPE-V8": "T.REX-PLATE"
+  },
+  {
+    "E-SPE-V8": "T.REX-XL2-NL"
+  },
+  {
+    "E-SPE-V8": "T.REX-XLBLK"
+  },
+  {
+    "E-SPE-V8": "T.REX-XL2BLK"
+  },
+  {
+    "E-SPE-V8": "KT-WSRVDEV"
+  },
+  {
+    "E-SPE-V8": "KT-WEBSVCSSA"
+  },
+  {
+    "E-SPE-V8": "KT-ADDSDK"
+  },
+  {
+    "E-SPE-V8": "AH40-IP_G5"
+  },
+  {
+    "E-SPE-V8": "AH30-RS485_G5"
+  },
+  {
+    "E-SPE-V8": "AH20-WIESTD_G5"
+  },
+  {
+    "E-SPE-V8": "AH20-WIEADV_G5"
+  },
+  {
+    "E-SPE-V8": "500ZB-EXTANT-00"
+  },
+  {
+    "E-SPE-V8": "505ZB-K-TOOL-01"
+  },
+  {
+    "E-SPE-V8": "500ZB-RD-USB-00"
+  },
+  {
+    "E-SPE-V8": "50720190-0-00--"
+  },
+  {
+    "E-SPE-V8": "50720190-0-01--"
+  },
+  {
+    "E-SPE-V8": "50720190-1-00--"
+  },
+  {
+    "E-SPE-V8": "50720190-1-01--"
+  },
+  {
+    "E-SPE-V8": "50520190-0000--"
+  },
+  {
+    "E-SPE-V8": "50520190-0001--"
+  },
+  {
+    "E-SPE-V8": "50520190-1000--"
+  },
+  {
+    "E-SPE-V8": "50520190-1001--"
+  },
+  {
+    "E-SPE-V8": "50520190-1100--"
+  },
+  {
+    "E-SPE-V8": "50520190-1101--"
+  },
+  {
+    "E-SPE-V8": "50520190-2000--"
+  },
+  {
+    "E-SPE-V8": "50520190-2001--"
+  },
+  {
+    "E-SPE-V8": "50520190-2100--"
+  },
+  {
+    "E-SPE-V8": "50520190-2101--"
+  },
+  {
+    "E-SPE-V8": "50520190-2200--"
+  },
+  {
+    "E-SPE-V8": "50520190-2201--"
+  },
+  {
+    "E-SPE-V8": "50520190-3000--"
+  },
+  {
+    "E-SPE-V8": "50520190-3001--"
+  },
+  {
+    "E-SPE-V8": "50520190-3100--"
+  },
+  {
+    "E-SPE-V8": "50520190-3101--"
+  },
+  {
+    "E-SPE-V8": "50520190-3200--"
+  },
+  {
+    "E-SPE-V8": "50520190-3201--"
+  },
+  {
+    "E-SPE-V8": "50520190-3300--"
+  },
+  {
+    "E-SPE-V8": "50520190-3301--"
+  },
+  {
+    "E-SPE-V8": "50520190-4000--"
+  },
+  {
+    "E-SPE-V8": "50520190-4001--"
+  },
+  {
+    "E-SPE-V8": "50520190-4100--"
+  },
+  {
+    "E-SPE-V8": "50520190-4101--"
+  },
+  {
+    "E-SPE-V8": "50520190-4200--"
+  },
+  {
+    "E-SPE-V8": "50520190-4201--"
+  },
+  {
+    "E-SPE-V8": "50520190-4300--"
+  },
+  {
+    "E-SPE-V8": "50520190-4301--"
+  },
+  {
+    "E-SPE-V8": "50520190-4400--"
+  },
+  {
+    "E-SPE-V8": "50520190-4401--"
+  },
+  {
+    "E-SPE-V8": "AP-H100-BL"
+  },
+  {
+    "E-SPE-V8": "AP-H100-BR"
+  },
+  {
+    "E-SPE-V8": "AL460500100"
+  },
+  {
+    "E-SPE-V8": "AL460500110"
+  },
+  {
+    "E-SPE-V8": "AL560500150"
+  },
+  {
+    "E-SPE-V8": "AL560500160"
+  },
+  {
+    "E-SPE-V8": "AL560500170"
+  },
+  {
+    "E-SPE-V8": "AL460501100"
+  },
+  {
+    "E-SPE-V8": "AL460501110"
+  },
+  {
+    "E-SPE-V8": "AL560501150"
+  },
+  {
+    "E-SPE-V8": "AL560501160"
+  },
+  {
+    "E-SPE-V8": "AL560501170"
+  },
+  {
+    "E-SPE-V8": "EA288-001000"
+  },
+  {
+    "E-SPE-V8": "EA288-002000"
+  },
+  {
+    "E-SPE-V8": "L100-PLATE-"
+  },
+  {
+    "E-SPE-V8": "L100-PLATE-PIN"
+  },
+  {
+    "E-SPE-V8": "EA322-100000"
+  },
+  {
+    "E-SPE-V8": "5001-1C8A60212-"
+  },
+  {
+    "E-SPE-V8": "5001-1C8A10212-"
+  },
+  {
+    "E-SPE-V8": "5001-1C8A11212-"
+  },
+  {
+    "E-SPE-V8": "5001-1C8B60212-"
+  },
+  {
+    "E-SPE-V8": "5001-1C8B61212-"
+  },
+  {
+    "E-SPE-V8": "5001-1C8B10212-"
+  },
+  {
+    "E-SPE-V8": "5001-1C8B11212-"
+  },
+  {
+    "E-SPE-V8": "5001-1C8C60212-"
+  },
+  {
+    "E-SPE-V8": "5001-1C8C61212-"
+  },
+  {
+    "E-SPE-V8": "5001-1C8C10212-"
+  },
+  {
+    "E-SPE-V8": "5001-1C8C11212-"
+  },
+  {
+    "E-SPE-V8": "5001-3C8A61212-"
+  },
+  {
+    "E-SPE-V8": "5001-3C8A10212-"
+  },
+  {
+    "E-SPE-V8": "5001-3C8A11212-"
+  },
+  {
+    "E-SPE-V8": "5001-3C8B60212-"
+  },
+  {
+    "E-SPE-V8": "5001-3C8B61212-"
+  },
+  {
+    "E-SPE-V8": "AP-KL100-19S"
+  },
+  {
+    "E-SPE-V8": "AP-KL100-22S"
+  },
+  {
+    "E-SPE-V8": "AP-KL100-19L"
+  },
+  {
+    "E-SPE-V8": "AP-KL100-22L"
+  },
+  {
+    "E-SPE-V8": "AP-P100-100"
+  },
+  {
+    "E-SPE-V8": "AP-KS200-S-IPS-B"
+  },
+  {
+    "E-SPE-V8": "ASA-HSAOSDP-DB"
+  },
+  {
+    "E-SPE-V8": "ASA-KS210-B-K1"
+  },
+  {
+    "E-SPE-V8": "ASA-KS210-B"
+  },
+  {
+    "E-SPE-V8": "ASA-KS210-B-BC"
+  },
+  {
+    "E-SPE-V8": "AP-SFICKD"
+  },
+  {
+    "E-SPE-V8": "KS200CBL120OC12"
+  },
+  {
+    "E-SPE-V8": "KS200CBL60OC12"
+  },
+  {
+    "E-SPE-V8": "R54270111"
+  },
+  {
+    "E-SPE-V8": "R54220301"
+  },
+  {
+    "E-SPE-V8": "SWH-CLD4700F"
+  },
+  {
+    "E-SPE-V8": "JCI-DESFV3-4K-HS"
+  },
+  {
+    "E-SPE-V8": "ARC1SR31BBT1JC11"
+  },
+  {
+    "E-SPE-V8": "ARCSR31ABT1JC11"
+  },
+  {
+    "E-SPE-V8": "ARCSR31BBT1JC11 "
+  },
+  {
+    "E-SPE-V8": "ARCSR31AQBT1JC11"
+  },
+  {
+    "E-SPE-V8": "ARC1SW33BBT1JC11"
+  },
+  {
+    "E-SPE-V8": "ARCSW33ABT1JC11 "
+  },
+  {
+    "E-SPE-V8": "ARCSW33BBT1JC11"
+  },
+  {
+    "E-SPE-V8": "ARCSW33AQBT1JC11 "
+  },
+  {
+    "E-SPE-V8": "ARCSR35HBT1JC11"
+  },
+  {
+    "E-SPE-V8": "ARCSR35HBT1JC21"
+  },
+  {
+    "E-SPE-V8": "PLAADAPV2ARCNO"
+  },
+  {
+    "E-SPE-V8": "PLAQ-ARC1-NO-V2"
+  },
+  {
+    "E-SPE-V8": "SHIELD-B"
+  },
+  {
+    "E-SPE-V8": "RAIN-COVER_01"
+  },
+  {
+    "E-SPE-V8": "TBLOCK_ARC1"
+  },
+  {
+    "E-SPE-V8": "SE9-1"
+  },
+  {
+    "E-SPE-V8": "SE8-y1"
+  },
+  {
+    "E-SPE-V8": "SE8M-y1"
+  },
+  {
+    "E-SPE-V8": "KIT-BC-JC1-OSDP"
+  },
+  {
+    "E-SPE-V8": "CNV_USB_485"
+  },
+  {
+    "E-SPE-V8": "CNV_USB_485ARC1"
+  },
+  {
+    "E-SPE-V8": "KIT-SECARD-BT"
+  },
+  {
+    "E-SPE-V8": "STKIT-ARC-STAND"
+  },
+  {
+    "E-SPE-V8": "STKIT-ARC-ADV"
+  },
+  {
+    "E-SPE-V8": "DAT-MIF-1KS50-BL          "
+  },
+  {
+    "E-SPE-V8": "DAT-MIF-4KS70-BL          "
+  },
+  {
+    "E-SPE-V8": "DAT-DESFV1-4K-BL"
+  },
+  {
+    "E-SPE-V8": "DAT-DESFV1-8K-BL"
+  },
+  {
+    "E-SPE-V8": "DAT-DESFV2-4K-BL"
+  },
+  {
+    "E-SPE-V8": "DAT-DESFV2-8K-BL"
+  },
+  {
+    "E-SPE-V8": "JCI-DESFV3-4K-HS"
+  },
+  {
+    "E-SPE-V8": "DAT-DESFV3-4K-BL          "
+  },
+  {
+    "E-SPE-V8": "DAT-DESFV3-8K-BL "
+  },
+  {
+    "E-SPE-V8": "DAT-DESFV3-4KEY"
+  },
+  {
+    "E-SPE-V8": "DAT-WB-OV64-JCI"
+  },
+  {
+    "E-SPE-V8": "DAT-WB-OV55-JCI"
+  },
+  {
+    "E-SPE-V8": "DAT-WB-OV64-CUS"
+  },
+  {
+    "E-SPE-V8": "DAT-WB-DESIGN"
+  },
+  {
+    "E-SPE-V8": "DAT-DESFV1-4K-TY          "
+  },
+  {
+    "E-SPE-V8": "DAT-DESFV1-8K-TY "
+  },
+  {
+    "E-SPE-V8": "DAT-DESFV2-8K-TY          "
+  },
+  {
+    "E-SPE-V8": "SENT-PROX-B"
+  },
+  {
+    "E-SPE-V8": "SENT-ICLS-B"
+  },
+  {
+    "E-SPE-V8": "SENT-SEOS-B"
+  },
+  {
+    "E-SPE-V8": "SENT-EV2-B"
+  },
+  {
+    "E-SPE-V8": "SENT-EV2SEOS-B"
+  },
+  {
+    "E-SPE-V8": "SENT-EV2LG-B"
+  },
+  {
+    "E-SPE-V8": "SENT-EV2LF-B"
+  },
+  {
+    "E-SPE-V8": "SENT-HEV2-NBP"
+  },
+  {
+    "E-SPE-V8": "SENT-HEV2SE-NBP"
+  },
+  {
+    "E-SPE-V8": "SENT-HEV2LG-NBP"
+  },
+  {
+    "E-SPE-V8": "SENT-HEV2LF-NBP"
+  },
+  {
+    "E-SPE-V8": "SENT-CH-1"
+  },
+  {
+    "E-SPE-V8": "SENT-SENKEY"
+  },
+  {
+    "E-SPE-V8": "SENT-SENKEY500"
+  },
+  {
+    "E-SPE-V8": "20NKS-00-000000"
+  },
+  {
+    "E-SPE-V8": "20TKS-00-000000"
+  },
+  {
+    "E-SPE-V8": "20KNKS-00-000000"
+  },
+  {
+    "E-SPE-V8": "20KTKS-00-000000"
+  },
+  {
+    "E-SPE-V8": "40NKS-00-000000"
+  },
+  {
+    "E-SPE-V8": "40TKS-00-000000"
+  },
+  {
+    "E-SPE-V8": "40KNKS-00-000000"
+  },
+  {
+    "E-SPE-V8": "40KTKS-00-000000"
+  },
+  {
+    "E-SPE-V8": "20NKS-02-0002BL"
+  },
+  {
+    "E-SPE-V8": "20TKS-02-0002BL"
+  },
+  {
+    "E-SPE-V8": "20KNKS-02-0002BL"
+  },
+  {
+    "E-SPE-V8": "20KTKS-02-0002BL"
+  },
+  {
+    "E-SPE-V8": "40NKS-02-0002BL"
+  },
+  {
+    "E-SPE-V8": "40TKS-02-0002BL"
+  },
+  {
+    "E-SPE-V8": "40KNKS-02-0002BL"
+  },
+  {
+    "E-SPE-V8": "40KTKS-02-0002BL"
+  },
+  {
+    "E-SPE-V8": "20NKS-01-00001H"
+  },
+  {
+    "E-SPE-V8": "20TKS-01-00001H"
+  },
+  {
+    "E-SPE-V8": "20KNKS-01-00001H"
+  },
+  {
+    "E-SPE-V8": "20KTKS-01-00001H"
+  },
+  {
+    "E-SPE-V8": "40NKS-01-00001H"
+  },
+  {
+    "E-SPE-V8": "40TKS-01-00001H"
+  },
+  {
+    "E-SPE-V8": "40KNKS-01-00001H"
+  },
+  {
+    "E-SPE-V8": "40KTKS-01-00001H"
+  },
+  {
+    "E-SPE-V8": "20NWS-00-000000"
+  },
+  {
+    "E-SPE-V8": "20TWS-00-000000"
+  },
+  {
+    "E-SPE-V8": "20KNWS-00-000000"
+  },
+  {
+    "E-SPE-V8": "20KTWS-00-000000"
+  },
+  {
+    "E-SPE-V8": "40NWS-00-000000"
+  },
+  {
+    "E-SPE-V8": "40TWS-00-000000"
+  },
+  {
+    "E-SPE-V8": "40KNWS-00-000000"
+  },
+  {
+    "E-SPE-V8": "40KTWS-00-000000"
+  },
+  {
+    "E-SPE-V8": "40TTKS-00-000000"
+  },
+  {
+    "E-SPE-V8": "40TTKS-01-000000"
+  },
+  {
+    "E-SPE-V8": "40TTKS-02-000000"
+  },
+  {
+    "E-SPE-V8": "40TTKS-03-000000"
+  },
+  {
+    "E-SPE-V8": "SIGNO-CBL-18"
+  },
+  {
+    "E-SPE-V8": "20-K-MP"
+  },
+  {
+    "E-SPE-V8": "40-K-MP"
+  },
+  {
+    "E-SPE-V8": "20KT-K-MP"
+  },
+  {
+    "E-SPE-V8": "40KT-K-MP"
+  },
+  {
+    "E-SPE-V8": "20-K-05"
+  },
+  {
+    "E-SPE-V8": "20-K-10"
+  },
+  {
+    "E-SPE-V8": "20-S-05"
+  },
+  {
+    "E-SPE-V8": "20-S-10"
+  },
+  {
+    "E-SPE-V8": "40-K-05"
+  },
+  {
+    "E-SPE-V8": "40-K-10"
+  },
+  {
+    "E-SPE-V8": "40-S-05"
+  },
+  {
+    "E-SPE-V8": "40-S-10"
+  },
+  {
+    "E-SPE-V8": "HID-UPG-A-900"
+  },
+  {
+    "E-SPE-V8": "HID-UPG-A-910"
+  },
+  {
+    "E-SPE-V8": "HID-UPG-A-920"
+  },
+  {
+    "E-SPE-V8": "HID-UPG-A-921"
+  },
+  {
+    "E-SPE-V8": "RDRSEU908K00000"
+  },
+  {
+    "E-SPE-V8": "600TGGAN"
+  },
+  {
+    "E-SPE-V8": "6013SGGAAN"
+  },
+  {
+    "E-SPE-V8": "MID-SUB-T050"
+  },
+  {
+    "E-SPE-V8": "MID-SUB-T050-ADD"
+  },
+  {
+    "E-SPE-V8": "MID-SUB-T053"
+  },
+  {
+    "E-SPE-V8": "MID-SUB-T053-ADD"
+  },
+  {
+    "E-SPE-V8": "MID-SUB-T100"
+  },
+  {
+    "E-SPE-V8": "MID-SUB-T100-ADD"
+  },
+  {
+    "E-SPE-V8": "MID-SUB-T103"
+  },
+  {
+    "E-SPE-V8": "MID-SUB-T103-ADD"
+  },
+  {
+    "E-SPE-V8": "SEC9X-CRD-E-MKYD"
+  },
+  {
+    "E-SPE-V8": "SEC9X-CRD-MADD"
+  },
+  {
+    "E-SPE-V8": "6132AK"
+  },
+  {
+    "E-SPE-V8": "6132AKB"
+  },
+  {
+    "E-SPE-V8": "6132AKD"
+  },
+  {
+    "E-SPE-V8": "6132AKE"
+  },
+  {
+    "E-SPE-V8": "IP65GSKT-R10"
+  },
+  {
+    "E-SPE-V8": "IP65GSKT-R15"
+  },
+  {
+    "E-SPE-V8": "IP65GSKT-R30"
+  },
+  {
+    "E-SPE-V8": "IP65GSKT-R40"
+  },
+  {
+    "E-SPE-V8": "IP65GSKT-RK40"
+  },
+  {
+    "E-SPE-V8": "6005BGB00"
+  },
+  {
+    "E-SPE-V8": "6005BKB00"
+  },
+  {
+    "E-SPE-V8": "5365EGP00"
+  },
+  {
+    "E-SPE-V8": "5365EGT00"
+  },
+  {
+    "E-SPE-V8": "5365EKP00"
+  },
+  {
+    "E-SPE-V8": "5365EKT00"
+  },
+  {
+    "E-SPE-V8": "5355AGN00"
+  },
+  {
+    "E-SPE-V8": "5455BGN00"
+  },
+  {
+    "E-SPE-V8": "5455BKN00"
+  },
+  {
+    "E-SPE-V8": "5355AGK00"
+  },
+  {
+    "E-SPE-V8": "5395CG100"
+  },
+  {
+    "E-SPE-V8": "5395CK100"
+  },
+  {
+    "E-SPE-V8": "5375AGN00"
+  },
+  {
+    "E-SPE-V8": "HID-MC-1000"
+  },
+  {
+    "E-SPE-V8": "HID-MC-0036"
+  },
+  {
+    "E-SPE-V8": "2000PGGMN"
+  },
+  {
+    "E-SPE-V8": "2002PGGMN"
+  },
+  {
+    "E-SPE-V8": "2003PGGMN"
+  },
+  {
+    "E-SPE-V8": "2004PGGMN"
+  },
+  {
+    "E-SPE-V8": "2120BGGMNM"
+  },
+  {
+    "E-SPE-V8": "2122BGGMNM"
+  },
+  {
+    "E-SPE-V8": "2123BGGMNM"
+  },
+  {
+    "E-SPE-V8": "2124BGGMNM"
+  },
+  {
+    "E-SPE-V8": "2050PNNMN"
+  },
+  {
+    "E-SPE-V8": "2052PNNMN"
+  },
+  {
+    "E-SPE-V8": "2053PNNMN"
+  },
+  {
+    "E-SPE-V8": "2054PNNMN"
+  },
+  {
+    "E-SPE-V8": "2060PKSMN"
+  },
+  {
+    "E-SPE-V8": "2062PKSMN"
+  },
+  {
+    "E-SPE-V8": "HID-C1326KSF"
+  },
+  {
+    "E-SPE-V8": "HID-C1336KSF"
+  },
+  {
+    "E-SPE-V8": "HID-C1346KSF"
+  },
+  {
+    "E-SPE-V8": "HID-C1386KSF"
+  },
+  {
+    "E-SPE-V8": "HID-C1386K/G"
+  },
+  {
+    "E-SPE-V8": "5006PGGMN"
+  },
+  {
+    "E-SPE-V8": "5005PGGMN"
+  },
+  {
+    "E-SPE-V8": "52260PHGGAAN"
+  },
+  {
+    "E-SPE-V8": "5105PGGMNN"
+  },
+  {
+    "E-SPE-V8": "5106PGGMNN"
+  },
+  {
+    "E-SPE-V8": "5746PGGNV"
+  },
+  {
+    "E-SPE-V8": "5746PGGNV7"
+  },
+  {
+    "E-SPE-V8": "5746VGGNV"
+  },
+  {
+    "E-SPE-V8": "1386LGGMN"
+  },
+  {
+    "E-SPE-V8": "1336LGGMN"
+  },
+  {
+    "E-SPE-V8": "1326LMSMV"
+  },
+  {
+    "E-SPE-V8": "1326LGSMV"
+  },
+  {
+    "E-SPE-V8": "1346LNSMN"
+  },
+  {
+    "E-SPE-V8": "1391LGSMN"
+  },
+  {
+    "E-SPE-V8": "IDV-9216AB"
+  },
+  {
+    "E-SPE-V8": "IDV-9330AB"
+  },
+  {
+    "E-SPE-V8": "WVL-ET10-2WS"
+  },
+  {
+    "E-SPE-V8": "WVL-ET10-3WS"
+  },
+  {
+    "E-SPE-V8": "WVL-ET10-6WS"
+  },
+  {
+    "E-SPE-V8": "WVL-ET10-7WS"
+  },
+  {
+    "E-SPE-V8": "WVL-ET20-2WS"
+  },
+  {
+    "E-SPE-V8": "WVL-ET20-3WS"
+  },
+  {
+    "E-SPE-V8": "WVL-ET20-6WS"
+  },
+  {
+    "E-SPE-V8": "WVL-ET20-7WS"
+  },
+  {
+    "E-SPE-V8": "WVL-ET25-2WS"
+  },
+  {
+    "E-SPE-V8": "WVL-ET25-3WS"
+  },
+  {
+    "E-SPE-V8": "WVL-ET25-6WS"
+  },
+  {
+    "E-SPE-V8": "WVL-ET25-7WS"
+  },
+  {
+    "E-SPE-V8": "WVL-RDR-AKU-LF"
+  },
+  {
+    "E-SPE-V8": "WVL-RDR80M"
+  },
+  {
+    "E-SPE-V8": "WVL-OSDP-CF"
+  },
+  {
+    "E-SPE-V8": "IDE-8MI-SLIM-OT"
+  },
+  {
+    "E-SPE-V8": "IDE-8MISLIMPKP-OT"
+  },
+  {
+    "E-SPE-V8": "IDE-8MIVS-OT"
+  },
+  {
+    "E-SPE-V8": "IDE-8MIVSKP-OT"
+  },
+  {
+    "E-SPE-V8": "IDE-8CDVM-OT"
+  },
+  {
+    "E-SPE-V8": "IDE-8MIVMKP-OT"
+  },
+  {
+    "E-SPE-V8": "IDE-8MI-SLIM-OC"
+  },
+  {
+    "E-SPE-V8": "IDE-8MISLIMPKP-OC"
+  },
+  {
+    "E-SPE-V8": "IDE-8MIVS-OC"
+  },
+  {
+    "E-SPE-V8": "IDE-8MIVSKP-OC"
+  },
+  {
+    "E-SPE-V8": "IDE-8CDVM-OC"
+  },
+  {
+    "E-SPE-V8": "IDE-8MIVMKP-OC"
+  },
+  {
+    "E-SPE-V8": "IDE-8MI-SLIM-WT"
+  },
+  {
+    "E-SPE-V8": "IDE-8MISLIMPKP-WT"
+  },
+  {
+    "E-SPE-V8": "IDE-8MIVS-WT"
+  },
+  {
+    "E-SPE-V8": "IDE-8MIVSKP-WT"
+  },
+  {
+    "E-SPE-V8": "IDE-8CDVM-WT"
+  },
+  {
+    "E-SPE-V8": "IDE-8MIVMKP-WT"
+  },
+  {
+    "E-SPE-V8": "IDE-8MI-SLIM-WC"
+  },
+  {
+    "E-SPE-V8": "IDE-8MISLIMPKP-WC"
+  },
+  {
+    "E-SPE-V8": "IDE-8MIVS-WC"
+  },
+  {
+    "E-SPE-V8": "IDE-8MIVSKP-WC"
+  },
+  {
+    "E-SPE-V8": "IDE-8CDVM-WC"
+  },
+  {
+    "E-SPE-V8": "IDE-8MIVMKP-WC"
+  },
+  {
+    "E-SPE-V8": "IDE-ENR-QW"
+  },
+  {
+    "E-SPE-V8": "IDE-ENR-AZ"
+  },
+  {
+    "E-SPE-V8": "IDE-180000023"
+  },
+  {
+    "E-SPE-V8": "IDE-DESCODER"
+  },
+  {
+    "E-SPE-V8": "HDS-074-022"
+  },
+  {
+    "E-SPE-V8": "HDS-074-044"
+  },
+  {
+    "E-SPE-V8": "CRD-474-02B"
+  },
+  {
+    "E-SPE-V8": "CRD-474-04B"
+  },
+  {
+    "E-SPE-V8": "CRD-474-02M"
+  },
+  {
+    "E-SPE-V8": "NED-9566945"
+  },
+  {
+    "E-SPE-V8": "NED-9986138"
+  },
+  {
+    "E-SPE-V8": "NED-9234195"
+  },
+  {
+    "E-SPE-V8": "NED-9217363"
+  },
+  {
+    "E-SPE-V8": "NED-9567593"
+  },
+  {
+    "E-SPE-V8": "NED-9567658"
+  },
+  {
+    "E-SPE-V8": "NED-9942335"
+  },
+  {
+    "E-SPE-V8": "NED-9946918"
+  },
+  {
+    "E-SPE-V8": "NED-9219641"
+  },
+  {
+    "E-SPE-V8": "NED-9224726"
+  },
+  {
+    "E-SPE-V8": "NED-9215255"
+  },
+  {
+    "E-SPE-V8": "NED-9943943"
+  },
+  {
+    "E-SPE-V8": "NED-9942343"
+  },
+  {
+    "E-SPE-V8": "NED-9206388"
+  },
+  {
+    "E-SPE-V8": "NED-9954104"
+  },
+  {
+    "E-SPE-V8": "NED-9959343"
+  },
+  {
+    "E-SPE-V8": "NED-9229203"
+  },
+  {
+    "E-SPE-V8": "NED-9229206"
+  },
+  {
+    "E-SPE-V8": "NED-9229213"
+  },
+  {
+    "E-SPE-V8": "NED-5626595"
+  },
+  {
+    "E-SPE-V8": "NED-9218327"
+  },
+  {
+    "E-SPE-V8": "NED-9229078"
+  },
+  {
+    "E-SPE-V8": "NED-9567879"
+  },
+  {
+    "E-SPE-V8": "NED-9230149"
+  },
+  {
+    "E-SPE-V8": "NED-9875980"
+  },
+  {
+    "E-SPE-V8": "NED-9948538"
+  },
+  {
+    "E-SPE-V8": "NED-9948554"
+  },
+  {
+    "E-SPE-V8": "NED-9564314"
+  },
+  {
+    "E-SPE-V8": "NED-9982809"
+  },
+  {
+    "E-SPE-V8": "NED-9216537"
+  },
+  {
+    "E-SPE-V8": "NED-9948546"
+  },
+  {
+    "E-SPE-V8": "NED-9988483"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-CLD"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-CLD-A"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-CLDE"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-CLDE-SGL"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-CLD-3YR"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-CLD-5YR"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-CLDE-3YR"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-CLDE-5YR"
+  },
+  {
+    "E-SPE-V8": "AAI-CLDE-SGL-3YR"
+  },
+  {
+    "E-SPE-V8": "AAI-CLDE-SGL-5YR"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-OP-P"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-OP-5YT"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-OP-5YT-EM"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-OPS"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-ENROL"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-ANGLE-LH"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-ANGLE-RH"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-EUR-O1"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-MUL"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-SURF"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-VESATURN"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-UNV-TURN"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-BMPR-01"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-SAMPLE"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-TURNST"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-PS"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-INT-CC9"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-INT-CC9A"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-INT-SSO"
+  },
+  {
+    "E-SPE-V8": "AAI-RCK-INT-SPLK"
+  },
+  {
+    "E-SPE-V8": "SUP-BioStar2-BAS"
+  },
+  {
+    "E-SPE-V8": "SUP-BioStar2-ADV"
+  },
+  {
+    "E-SPE-V8": "SUP-BS3-DB"
+  },
+  {
+    "E-SPE-V8": "SUP-BS3-APWB"
+  },
+  {
+    "E-SPE-V8": "SUP-FS2-D"
+  },
+  {
+    "E-SPE-V8": "SUP-FS2-AWB"
+  },
+  {
+    "E-SPE-V8": "SUP-FSF2-DB"
+  },
+  {
+    "E-SPE-V8": "SUP-FSF2-AB"
+  },
+  {
+    "E-SPE-V8": "SUP-FSF2-ODB"
+  },
+  {
+    "E-SPE-V8": "SUP-TCM10-FS2"
+  },
+  {
+    "E-SPE-V8": "SUP-BEW2-ODPB"
+  },
+  {
+    "E-SPE-V8": "SUP-BEW2-OHPB"
+  },
+  {
+    "E-SPE-V8": "SUP-BEW2-OAPB"
+  },
+  {
+    "E-SPE-V8": "SUP-BEP2-OD"
+  },
+  {
+    "E-SPE-V8": "SUP-BEP2-OA"
+  },
+  {
+    "E-SPE-V8": "SUP-BS2A-ODPB"
+  },
+  {
+    "E-SPE-V8": "SUP-BS2A-OAPWB"
+  },
+  {
+    "E-SPE-V8": "SUP-BLN2-ODB"
+  },
+  {
+    "E-SPE-V8": "SUP-BLN2-OAB"
+  },
+  {
+    "E-SPE-V8": "SUP-BLN2-PAB"
+  },
+  {
+    "E-SPE-V8": "SUP-BioMiniSlim2"
+  },
+  {
+    "E-SPE-V8": "MOR-293744571"
+  },
+  {
+    "E-SPE-V8": "MOR-293744604"
+  },
+  {
+    "E-SPE-V8": "MOR-293767954"
+  },
+  {
+    "E-SPE-V8": "MOR-293784546"
+  },
+  {
+    "E-SPE-V8": "MOR-293762264"
+  },
+  {
+    "E-SPE-V8": "MOR-293803151"
+  },
+  {
+    "E-SPE-V8": "MOR-293793826"
+  },
+  {
+    "E-SPE-V8": "MOR-293806277"
+  },
+  {
+    "E-SPE-V8": "MOR-293806285"
+  },
+  {
+    "E-SPE-V8": "MOR-293806298"
+  },
+  {
+    "E-SPE-V8": "MOR-293806305"
+  },
+  {
+    "E-SPE-V8": "MOR-293806318"
+  },
+  {
+    "E-SPE-V8": "MOR-293806256"
+  },
+  {
+    "E-SPE-V8": "MOR-293722319"
+  },
+  {
+    "E-SPE-V8": "MOR-293722301"
+  },
+  {
+    "E-SPE-V8": "MOR-293771247"
+  },
+  {
+    "E-SPE-V8": "MOR-293777400"
+  },
+  {
+    "E-SPE-V8": "MOR-293759994"
+  },
+  {
+    "E-SPE-V8": "MOR-293760004"
+  },
+  {
+    "E-SPE-V8": "MOR-293670375"
+  },
+  {
+    "E-SPE-V8": "MOR-293670362"
+  },
+  {
+    "E-SPE-V8": "MOR-293638877"
+  },
+  {
+    "E-SPE-V8": "MOR-293638856"
+  },
+  {
+    "E-SPE-V8": "MOR-293678615"
+  },
+  {
+    "E-SPE-V8": "MOR-293678628"
+  },
+  {
+    "E-SPE-V8": "MOR-293673665"
+  },
+  {
+    "E-SPE-V8": "MOR-293678636"
+  },
+  {
+    "E-SPE-V8": "MOR-293673644"
+  },
+  {
+    "E-SPE-V8": "MOR-293678678"
+  },
+  {
+    "E-SPE-V8": "MOR-293678660"
+  },
+  {
+    "E-SPE-V8": "MOR-293701729"
+  },
+  {
+    "E-SPE-V8": "MOR-293701740"
+  },
+  {
+    "E-SPE-V8": "MOR-293701737"
+  },
+  {
+    "E-SPE-V8": "MOR-293690335"
+  },
+  {
+    "E-SPE-V8": "MOR-293589574"
+  },
+  {
+    "E-SPE-V8": "MOR-293654719"
+  },
+  {
+    "E-SPE-V8": "MOR-293654727"
+  },
+  {
+    "E-SPE-V8": "EYE-NIXT"
+  },
+  {
+    "E-SPE-V8": "EYE-NEXT2"
+  },
+  {
+    "E-SPE-V8": "EYE-NFACE"
+  },
+  {
+    "E-SPE-V8": "EYE-ITEMP"
+  },
+  {
+    "E-SPE-V8": "EYE-M"
+  },
+  {
+    "E-SPE-V8": "EYE-EIS-EYE"
+  },
+  {
+    "E-SPE-V8": "EYE-EIS-SSA"
+  },
+  {
+    "E-SPE-V8": "EYE-N-NXT"
+  },
+  {
+    "E-SPE-V8": "EYE-N-NXT-ANG"
+  },
+  {
+    "E-SPE-V8": "EYE-N-EXT-STD"
+  },
+  {
+    "E-SPE-V8": "EYE-N-EXT-ANG"
+  },
+  {
+    "E-SPE-V8": "IID-ICAM7S-B"
+  },
+  {
+    "E-SPE-V8": "IID-ICAM7S-T"
+  },
+  {
+    "E-SPE-V8": "IID-ICAM7LCD-B"
+  },
+  {
+    "E-SPE-V8": "IID-ICAM7LCD-T"
+  },
+  {
+    "E-SPE-V8": "IID-ICAM7S-H1B"
+  },
+  {
+    "E-SPE-V8": "IID-ICAM7S-H1T"
+  },
+  {
+    "E-SPE-V8": "IID-ICAMTD100A"
+  },
+  {
+    "E-SPE-V8": "IID-ICAMTD1-UC"
+  },
+  {
+    "E-SPE-V8": "IID-ICAM7-ST"
+  },
+  {
+    "E-SPE-V8": "IID-ICAM7-PWR"
+  },
+  {
+    "E-SPE-V8": "IID-EAC500"
+  },
+  {
+    "E-SPE-V8": "IID-EAC2500"
+  },
+  {
+    "E-SPE-V8": "IID-EAC5K"
+  },
+  {
+    "E-SPE-V8": "IID-EAC10K"
+  },
+  {
+    "E-SPE-V8": "IID-ICAMEXTHC1"
+  },
+  {
+    "E-SPE-V8": "IID-ICAMEXTHC2"
+  },
+  {
+    "E-SPE-V8": "FAR050020"
+  },
+  {
+    "E-SPE-V8": "FAR050120"
+  },
+  {
+    "E-SPE-V8": "FAR45000"
+  },
+  {
+    "E-SPE-V8": "FAR055000"
+  },
+  {
+    "E-SPE-V8": "FAR055100"
+  },
+  {
+    "E-SPE-V8": "FAR45210"
+  },
+  {
+    "E-SPE-V8": "FAR45201"
+  },
+  {
+    "E-SPE-V8": "FAR45202"
+  },
+  {
+    "E-SPE-V8": "FAR086177"
+  },
+  {
+    "E-SPE-V8": "FAR096600"
+  },
+  {
+    "E-SPE-V8": "FAR84050"
+  },
+  {
+    "E-SPE-V8": "FAR84051"
+  },
+  {
+    "E-SPE-V8": "FAR84052"
+  },
+  {
+    "E-SPE-V8": "FAR84053"
+  },
+  {
+    "E-SPE-V8": "FAR84056"
+  },
+  {
+    "E-SPE-V8": "FAR89200"
+  },
+  {
+    "E-SPE-V8": "FAR082136"
+  },
+  {
+    "E-SPE-V8": "FAR094640"
+  },
+  {
+    "E-SPE-V8": "FAR094641"
+  },
+  {
+    "E-SPE-V8": "FAR094681"
+  },
+  {
+    "E-SPE-V8": "FAR088933"
+  },
+  {
+    "E-SPE-V8": "FAR084911"
+  },
+  {
+    "E-SPE-V8": "FAR084900"
+  },
+  {
+    "E-SPE-V8": "VID-24C708AF-1"
+  },
+  {
+    "E-SPE-V8": "VID-24C708-SYS-1"
+  },
+  {
+    "E-SPE-V8": "IDS-68"
+  },
+  {
+    "E-SPE-V8": "IDP-64-BK"
+  },
+  {
+    "E-SPE-V8": "IDP-64-DS-BK"
+  },
+  {
+    "E-SPE-V8": "VPA"
+  },
+  {
+    "E-SPE-V8": "RSCA"
+  },
+  {
+    "E-SPE-V8": "LAN-CONT-BL"
+  },
+  {
+    "E-SPE-V8": "LAN-STAFF-GR"
+  },
+  {
+    "E-SPE-V8": "LAN-BW-BK"
+  },
+  {
+    "E-SPE-V8": "YOYO-5-BK-STP"
+  },
+  {
+    "E-SPE-V8": "ICS-A10001"
+  },
+  {
+    "E-SPE-V8": "ICS-A10002"
+  },
+  {
+    "E-SPE-V8": "ICS-A10004"
+  },
+  {
+    "E-SPE-V8": "ICS-A10005"
+  },
+  {
+    "E-SPE-V8": "ICS-A10010"
+  },
+  {
+    "E-SPE-V8": "ICS-A10020"
+  },
+  {
+    "E-SPE-V8": "ICS-A10040"
+  },
+  {
+    "E-SPE-V8": "ICS-A10060"
+  },
+  {
+    "E-SPE-V8": "ICS-A10000R"
+  },
+  {
+    "E-SPE-V8": "ICS-AGL120NTBR"
+  },
+  {
+    "E-SPE-V8": "ICS-GL1800F-10TB"
+  },
+  {
+    "E-SPE-V8": "ICS-Z1800"
+  },
+  {
+    "E-SPE-V8": "ICS-SL500"
+  },
+  {
+    "E-SPE-V8": "ICS-300ZLDC"
+  },
+  {
+    "E-SPE-V8": "ICS-500ZLDC"
+  },
+  {
+    "E-SPE-V8": "ICS-500ZLW"
+  },
+  {
+    "E-SPE-V8": "ICS-300CL"
+  },
+  {
+    "E-SPE-V8": "ICS-500CL"
+  },
+  {
+    "E-SPE-V8": "ICS-U320M"
+  },
+  {
+    "E-SPE-V8": "ICS-U520S"
+  },
+  {
+    "E-SPE-V8": "ICS-ARCH2-2"
+  },
+  {
+    "E-SPE-V8": "ICS-10412"
+  },
+  {
+    "E-SPE-V8": "ICS-10412SH"
+  },
+  {
+    "E-SPE-V8": "ICS-GK310LS"
+  },
+  {
+    "E-SPE-V8": "ICS-EB300VGL"
+  },
+  {
+    "E-SPE-V8": "ICS-GS200M"
+  },
+  {
+    "E-SPE-V8": "ICS-GS200SH"
+  },
+  {
+    "E-SPE-V8": "ICS-GS200GH"
+  },
+  {
+    "E-SPE-V8": "ICS-BR500"
+  },
+  {
+    "E-SPE-V8": "ICS-300BP"
+  },
+  {
+    "E-SPE-V8": "ICS-U300AL"
+  },
+  {
+    "E-SPE-V8": "ACA001"
+  },
+  {
+    "E-SPE-V8": "PB-EXIT"
+  },
+  {
+    "E-SPE-V8": "DRB-IR"
+  },
+  {
+    "E-SPE-V8": "DRB-IR-S"
+  },
+  {
+    "E-SPE-V8": "BTS-486"
+  },
+  {
+    "E-SPE-V8": "DRB-SH"
+  },
+  {
+    "E-SPE-V8": "DRB-SH-G"
+  },
+  {
+    "E-SPE-V8": "DRB-SH-W"
+  },
+  {
+    "E-SPE-V8": "DRB002F-PTE"
+  },
+  {
+    "E-SPE-V8": "DRB002NF"
+  },
+  {
+    "E-SPE-V8": "DRB002NF-PTE"
+  },
+  {
+    "E-SPE-V8": "DRB004F-PTE"
+  },
+  {
+    "E-SPE-V8": "DRB006F-PTE"
+  },
+  {
+    "E-SPE-V8": "DDA900-1"
+  },
+  {
+    "E-SPE-V8": "KS001"
+  },
+  {
+    "E-SPE-V8": "ICS-KS001-DP"
+  },
+  {
+    "E-SPE-V8": "T.REX-LT"
+  },
+  {
+    "E-SPE-V8": "T.REX-LT-NL"
+  },
+  {
+    "E-SPE-V8": "TREX-LT2"
+  },
+  {
+    "E-SPE-V8": "T.REX-LT2-NL"
+  },
+  {
+    "E-SPE-V8": "T.REX-XL"
+  },
+  {
+    "E-SPE-V8": "T.REX-XL-NL"
+  },
+  {
+    "E-SPE-V8": "TREX-XL2"
+  },
+  {
+    "E-SPE-V8": "T.REX-PLATE"
+  },
+  {
+    "E-SPE-V8": "T.REX-XL2-NL"
+  },
+  {
+    "E-SPE-V8": "T.REX-XLBLK"
+  },
+  {
+    "E-SPE-V8": "T.REX-XL2BLK"
+  },
+  {
+    "E-SPE-V8": "MCP3A-G000SF-13"
+  },
+  {
+    "E-SPE-V8": "MCP4A-G000SF-13"
+  },
+  {
+    "E-SPE-V8": "M8A-G000SF-K013-11"
+  },
+  {
+    "E-SPE-V8": "636.008.155.Y"
+  },
+  {
+    "E-SPE-V8": "KAC-PS200"
+  },
+  {
+    "E-SPE-V8": "DL400"
+  },
+  {
+    "E-SPE-V8": "DL350"
+  },
+  {
+    "E-SPE-V8": "CEQ/430/001"
+  },
+  {
+    "E-SPE-V8": "POE29U-1AT(PL)D"
+  },
+  {
+    "E-SPE-V8": "UDS1100"
+  },
+  {
+    "E-SPE-V8": "ELM-G13801BM-A"
+  },
+  {
+    "E-SPE-V8": "ELM-G13802BM-2-C"
+  },
+  {
+    "E-SPE-V8": "ELM-G13804BM-4-B"
+  },
+  {
+    "E-SPE-V8": "ELM-G13810BM-8-R"
+  },
+  {
+    "E-SPE-V8": "ELM-PSUIR-12"
+  },
+  {
+    "E-SPE-V8": "ELM-G2402BM-C "
+  },
+  {
+    "E-SPE-V8": "0351-0547-03"
+  },
+  {
+    "E-SPE-V8": "0352-0460-02W"
+  },
+  {
+    "E-SPE-V8": "0352-0460-03W"
+  },
+  {
+    "E-SPE-V8": "PS-1270"
+  },
+  {
+    "E-SPE-V8": "PS-1242"
+  },
+  {
+    "E-SPE-V8": "PS-12170"
+  }
+]
