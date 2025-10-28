@@ -339,17 +339,8 @@ textarea::placeholder {
                     </tbody>
                 </table>
             </div>
-            <div class="form-group mb-5">
-                <label for="OrderDate" class="me-2">Estimated Order Date <span class="req">*</span></label>
-                <select id="OrderDate" name="OrderDate" required class=" select">
-                    <option value="">-- Select --</option>
-                    <option value="1-3 Months">1-3 Months</option>
-                    <option value="3-6 Months">3-6 Months</option>
-                    <option value="6-12 Monthes">6-12 Months</option>
-                    <option value="More than one year">More than one year</option>
-                   
-                </select>
-            </div>
+            
+            
  
             <!-- Project Registration Reason Section -->
             <h4>Why do you want project registration</h4>
@@ -549,10 +540,7 @@ document.addEventListener('DOMContentLoaded', function () {
       valid = false;
       emptyFields.push('Registration Reason');
     }
-    if (!document.querySelector('input[name="OrderDate"]:checked')) {
-      valid = false;
-      emptyFields.push('Estimated Order Date');
-    }
+   
 
     if (!valid) {
       messageDiv.innerHTML = `⚠️ Please fill in the following required fields:<br>- ${emptyFields.join('<br>- ')}`;
