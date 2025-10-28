@@ -121,15 +121,7 @@ textarea:focus {
 .remove-row-btn:hover {
     background-color: #b02a37;
 }
-.select{
-    width: 280px;
-    font-size: 15px;
-    padding: 10px 12px;
-    border: 1.5px solid #ced4da;
-    border-radius: 6px;
-    font-size: 15px;
-    transition: all 0.3s ease;
-}
+
 /* Messages */
 .message {
     font-size: 15px;
@@ -358,8 +350,7 @@ textarea::placeholder {
                    
                 </select>
             </div>
-          
-
+ 
             <!-- Project Registration Reason Section -->
             <h4>Why do you want project registration</h4>
             <div class="form-section">
@@ -558,6 +549,10 @@ document.addEventListener('DOMContentLoaded', function () {
       valid = false;
       emptyFields.push('Registration Reason');
     }
+    if (!document.querySelector('input[name="OrderDate"]:checked')) {
+      valid = false;
+      emptyFields.push('Estimated Order Date');
+    }
 
     if (!valid) {
       messageDiv.innerHTML = `⚠️ Please fill in the following required fields:<br>- ${emptyFields.join('<br>- ')}`;
@@ -623,7 +618,8 @@ document.addEventListener('DOMContentLoaded', function () {
   partnerContact: form.partnerContact.value,
   partnerPhone: form.partnerPhone.value,
   partnerCity: form.partnerCity.value,
-  OrderDate:form.OrderDate.value,
+
+
   brands: Array.from(document.querySelectorAll('input[name="brands"]:checked')).map(cb => cb.value).join(', '),
  models_table: models_table,
   projectDescription: form.projectDescription.value
