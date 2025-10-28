@@ -121,7 +121,15 @@ textarea:focus {
 .remove-row-btn:hover {
     background-color: #b02a37;
 }
-
+.select{
+    width: 280px;
+    font-size: 15px;
+    padding: 10px 12px;
+    border: 1.5px solid #ced4da;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
 /* Messages */
 .message {
     font-size: 15px;
@@ -195,6 +203,7 @@ td {
 .req {
     
     font-weight: 600;
+    color: #b02a37;
 }
 
 /* Placeholder style */
@@ -338,7 +347,17 @@ textarea::placeholder {
                     </tbody>
                 </table>
             </div>
-
+            <div class="form-group mb-5">
+                <label for="OrderDate" class="me-2">Estimated Order Date <span class="req">*</span></label>
+                <select id="OrderDate" name="OrderDate" required class=" select">
+                    <option value="">-- Select --</option>
+                    <option value="1-3 Months">1-3 Months</option>
+                    <option value="3-6 Months">3-6 Months</option>
+                    <option value="6-12 Monthes">6-12 Months</option>
+                    <option value="More than one year">More than one year</option>
+                   
+                </select>
+            </div>
           
 
             <!-- Project Registration Reason Section -->
@@ -398,6 +417,7 @@ textarea::placeholder {
 
             <!-- Project Details Section -->
             <h4>Project Details</h4>
+          
             <div class="form-section">
                 <div class="form-group">
                     <label for="projectDescription">Project Description</label>
@@ -518,7 +538,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let emptyFields = [];
 
     // Validate text, email, number, tel, textarea fields
-    form.querySelectorAll('input[required], textarea[required]').forEach(field => {
+    form.querySelectorAll('input[required], textarea[required],select[required]').forEach(field => {
       if (!field.value.trim()) {
         valid = false;
         field.style.borderColor = '#b02c39';
@@ -603,6 +623,7 @@ document.addEventListener('DOMContentLoaded', function () {
   partnerContact: form.partnerContact.value,
   partnerPhone: form.partnerPhone.value,
   partnerCity: form.partnerCity.value,
+  OrderDate:form.OrderDate.value,
   brands: Array.from(document.querySelectorAll('input[name="brands"]:checked')).map(cb => cb.value).join(', '),
  models_table: models_table,
   projectDescription: form.projectDescription.value
