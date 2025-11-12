@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro de Proyecto</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * { box-sizing: border-box; font-family: Arial, sans-serif; }
+        body {
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px 35px;
+            border-radius: 12px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+        }
+        h1 {
+            text-align: center;
+            color: #8594ac;
+            margin-bottom: 25px;
+            font-size: 2em;
+            font-weight: 700;
+        }
+        h2, h4 {
+            color: #0d6efd;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            border-bottom: 2px solid #0d6efd33;
+            padding-bottom: 5px;
+        }
+        label { font-weight: 500; color: #495057; }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
+            width: 100%; padding: 10px 12px; border: 1.5px solid #ced4da;
+            border-radius: 6px; font-size: 15px; transition: all 0.3s ease;
+        }
+        input:focus, textarea:focus {
+            border-color: #0d6efd; box-shadow: 0 0 8px rgba(13, 110, 253, 0.3); outline: none;
+        }
+        .submit-btn, .add-row-btn, .remove-row-btn {
+            font-weight: 600; transition: all 0.3s ease;
+        }
+        .submit-btn {
+            background: #0d6efd; color: #fff; border-radius: 8px;
+            padding: 12px 30px; margin-top: 10px;
+        }
+        .submit-btn:hover { background-color: #0b5ed7; }
+        .add-row-btn {
+            background: #0d6efd; color: #fff; border-radius: 6px;
+            margin-bottom: 10px; margin-left: 10px; font-size: small;
+        }
+        .add-row-btn:hover { background-color: #0b5ed7; }
+        .remove-row-btn {
+            background-color: #dc3545; border-radius: 6px; font-size: small;
+        }
+        .remove-row-btn:hover { background-color: #b02a37; }
+        .message {
+            font-size: 15px; padding: 14px 18px; border-radius: 8px;
+            margin-bottom: 20px; margin-top: 20px;
+        }
+        .success {
+            background-color: #d1e7dd; border: 1px solid #badbcc; color: #0f5132;
+        }
+        .error {
+            background-color: #f8d7da; border: 1px solid #f5c2c7; color: #842029;
+        }
+        table {
+            width: 100%; border-collapse: collapse; border-radius: 6px;
+            overflow: hidden; margin-bottom: 10px; font-size: 14px;
+        }
+        th, td { padding: 10px 12px; text-align: left; }
+        th { background-color: #e9f2ff; color: #0d6efd; font-weight: 600; }
+        td { background-color: #f8f9fa; }
+        .checkbox-group, .radio-group {
+            display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 15px;
+        }
+        .checkbox-item, .radio-item {
+            display: flex; align-items: center; font-size: small; gap: 6px;
+        }
+        .checkbox-item input, .radio-item input {
+            width: 18px; height: 18px; accent-color: #0d6efd; cursor: pointer;
+        }
+        .req { font-weight: 600; color: #b02a37; }
+        input::placeholder, textarea::placeholder {
+            color: #adb5bd; font-style: italic;
+        }
+        .table-bottom-border td, .table-bottom-border th {
+            border: none !important; color: #0b7dda;
+            font-size: x-large; text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="ms-5 mb-4 border-bottom">
+        <table class="table table-bottom-border">
+            <thead>
+            <tr>
+                <th>Illustra</th>
+                <th>American Dynamics</th>
+                <th>Exacq</th>
+            </tr>
+            <tr>
+                <th>Kantech</th>
+                <th>Software House</th>
+                <th>CEM Systems</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <h1>Formulario de Registro de Proyecto</h1>
+
+    <form id="projectForm">
+        <h4>Información General</h4>
+        <div class="form-section">
+            <label for="yourName">Tu nombre <span class="req">*</span></label>
+            <input type="text" id="yourName" name="yourName" placeholder="requerido" required>
+
+            <label for="yourEmail">Tu correo electrónico <span class="req">*</span></label>
+            <input type="email" id="yourEmail" name="yourEmail" placeholder="requerido" required>
+
+            <label for="projectName">Nombre del proyecto <span class="req">*</span></label>
+            <input type="text" id="projectName" name="projectName" placeholder="requerido" required>
+        </div>
+
+        <h4>Información del Socio</h4>
+        <table>
+            <tr><td>Empresa</td><td><input type="text" name="partnerContact" placeholder="requerido" required></td></tr>
+            <tr><td>Teléfono</td><td><input type="tel" name="partnerPhone" placeholder="requerido" required></td></tr>
+            <tr><td>País</td><td><input type="text" name="partnerCity" placeholder="requerido" required></td></tr>
+        </table>
+
+        <h4>Fecha estimada de pedido <span class="req">*</span></h4>
+        <div class="radio-group">
+            <label class="radio-item"><input type="radio" name="OrderDate" value="1-3 Meses"> 1-3 Meses</label>
+            <label class="radio-item"><input type="radio" name="OrderDate" value="3-6 Meses"> 3-6 Meses</label>
+            <label class="radio-item"><input type="radio" name="OrderDate" value="6-12 Meses"> 6-12 Meses</label>
+            <label class="radio-item"><input type="radio" name="OrderDate" value="Más de un año"> Más de un año</label>
+        </div>
+
+        <h4>Información del Cliente</h4>
+        <table>
+            <thead>
+            <tr><th></th><th>Usuario Final</th><th>Contratista/Distribuidor</th></tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Nombre de la empresa</td>
+                <td><input type="text" name="endUserCompany" placeholder="requerido" required></td>
+                <td><input type="text" name="contractorCompany"></td>
+            </tr>
+            <tr>
+                <td>Persona de contacto</td>
+                <td><input type="text" name="endUserContact" placeholder="requerido" required></td>
+                <td><input type="text" name="contractorContact"></td>
+            </tr>
+            <tr>
+                <td>Teléfono</td>
+                <td><input type="tel" name="endUserPhone" placeholder="requerido" required></td>
+                <td><input type="tel" name="contractorPhone"></td>
+            </tr>
+            <tr>
+                <td>Correo electrónico</td>
+                <td><input type="email" name="endUserEmail" placeholder="requerido" required></td>
+                <td><input type="email" name="contractorEmail"></td>
+            </tr>
+            <tr>
+                <td>Ciudad</td>
+                <td><input type="text" name="endUserCity" placeholder="requerido" required></td>
+                <td><input type="text" name="contractorCity"></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h4>¿Por qué deseas registrar el proyecto? <span class="req">*</span></h4>
+        <div class="radio-group">
+            <label class="radio-item"><input type="radio" name="registrationReason" value="Protección del Proyecto"> Protección del Proyecto</label>
+            <label class="radio-item"><input type="radio" name="registrationReason" value="Precios Especiales"> Precios Especiales</label>
+            <label class="radio-item"><input type="radio" name="registrationReason" value="Otros Motivos"> Otros Motivos</label>
+        </div>
+
+        <h4>Marcas <span class="req">*</span></h4>
+        <div class="checkbox-group">
+            <label class="checkbox-item"><input type="checkbox" name="brands" value="Illustra"><a href="https://illustracameras.com" target="_blank">Illustra</a></label>
+            <label class="checkbox-item"><input type="checkbox" name="brands" value="Exacq"><a href="https://www.exacq.com" target="_blank">Exacq</a></label>
+            <label class="checkbox-item"><input type="checkbox" name="brands" value="American Dynamics"><a href="https://www.americandynamics.net" target="_blank">American Dynamics</a></label>
+            <label class="checkbox-item"><input type="checkbox" name="brands" value="Kantech"><a href="https://www.kantech.com" target="_blank">Kantech</a></label>
+            <label class="checkbox-item"><input type="checkbox" name="brands" value="Software House"><a href="https://www.swhouse.com" target="_blank">Software House</a></label>
+            <label class="checkbox-item"><input type="checkbox" name="brands" value="CEM Systems"><a href="https://www.cemsys.com" target="_blank">CEM Systems</a></label>
+            <label class="checkbox-item"><input type="checkbox" name="brands" value="Accesorios">Accesorios</label>
+        </div>
+
+        <h4>Detalles del Proyecto</h4>
+        <label for="projectDescription">Descripción del proyecto</label>
+        <textarea id="projectDescription" name="projectDescription" rows="4"></textarea>
+
+        <label>Números de modelo y cantidades
+            <span><a href="ModelsFile.xlsx" target="_blank"><i class="fa fa-file me-2"></i>Archivo de modelos</a></span>
+        </label>
+        <table id="modelTable">
+            <thead><tr><th>Cantidad</th><th>Número de modelo</th><th>Acción</th></tr></thead>
+            <tbody>
+            <tr>
+                <td><input type="number" name="quantity[]" min="1"></td>
+                <td><input type="text" name="modelNumber[]" list="modelList" required></td>
+                <td><button type="button" class="remove-row-btn"><i class="fa fa-trash me-2"></i>Eliminar</button></td>
+            </tr>
+            </tbody>
+        </table>
+        <datalist id="modelList"></datalist>
+        <button type="button" class="add-row-btn" id="addModelRow"><i class="fa fa-plus me-2"></i>Agregar modelo</button>
+
+       <div>
+        <label for="approximateValue">Valor aproximado - Precio objetivo</label>
+        <input type="number" id="approximateValue" name="approximateValue" min="0" step="0.01">
+
+       </div> 
+        <div id="message" class="message" style="display:none;"></div>
+        <button type="submit" class="submit-btn">Enviar registro</button>
+    </form>
+</div>
+
+<script>
+ //send Email and validate
+
+
+// Model List auto complete from Json File
+async function loadModelList() {
+    try{
+        const response = await fetch('model.json');
+        const data = await response.json();
+        const modelValues = data.map(item=>item["E-SPE-V8"]).filter(Boolean);
+        const dataList = document.getElementById('modelList');
+        dataList.innerHTML='';
+        modelValues.forEach(model=>{
+            const option =document.createElement('option');
+            option.value=model;
+            dataList.appendChild(option);
+        });
+    }catch (error){
+        console.error('Failed to load models',error);
+    }
+
+    
+}
+window.addEventListener('DOMContentLoaded', loadModelList);
+
+
+emailjs.init("4kquBdqRHewuXnRBz");
+
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('projectForm');
+  const messageDiv = document.getElementById('message');
+  const modelTableBody = document.querySelector('#modelTable tbody');
+
+  document.getElementById('addModelRow').addEventListener('click', () => {
+    const newRow = document.createElement('tr');
+    newRow.innerHTML = `
+      <td><input type="number" name="quantity[]" min="1"></td>
+      <td><input type="text" name="modelNumber[]" list="modelList" required></td>
+      <td><button type="button" class="remove-row-btn"><i class="fa fa-trash me-2"></i>Eliminar</button></td>`;
+    modelTableBody.appendChild(newRow);
+  });
+
+  modelTableBody.addEventListener('click', (e) => {
+    if (e.target.classList.contains('remove-row-btn')) {
+      e.target.closest('tr').remove();
+    }
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    messageDiv.innerHTML = '✅ Formulario enviado correctamente. ¡Correo enviado!';
+    messageDiv.className = 'message success';
+    messageDiv.style.display = 'block';
+    document.querySelectorAll('input, textarea').forEach(f => f.style.borderColor = '#ddd');
+
+    let valid = true;
+    let emptyFields = [];
+
+    // Validate text, email, number, tel, textarea fields
+    form.querySelectorAll('input[required], textarea[required],select[required]').forEach(field => {
+      if (!field.value.trim()) {
+        valid = false;
+        field.style.borderColor = '#b02c39';
+        const label = form.querySelector(`label[for="${field.id}"]`);
+        emptyFields.push(label ? label.textContent.replace('*','').trim() : 'This field');
+      }
+    });
+
+    // Validate at least one checkbox for 'brands' (if required)
+    if (document.querySelectorAll('input[name="brands"]:checked').length === 0) {
+      valid = false;
+      emptyFields.push('Marcas');
+    }
+
+    // Validate radio buttons (registrationReason)
+    if (!document.querySelector('input[name="registrationReason"]:checked')) {
+      valid = false;
+      emptyFields.push('Razón de registro');
+    }
+
+    //validation Estimated Date
+        if (!document.querySelector('input[name="OrderDate"]:checked')) {
+      valid = false;
+      emptyFields.push('Fecha estimada de pedido');
+    }
+
+
+   
+
+    if (!valid) {
+      messageDiv.innerHTML = `⚠️ Por favor, complete los siguientes campos obligatorios:<br>- ${emptyFields.join('<br>- ')}`;
+      messageDiv.className = 'message error';
+      messageDiv.style.display = 'block';
+      return;
+    }
+
+    // Collect form data
+    const models_table = (() => {
+
+  
+  const quantities = Array.from(document.querySelectorAll('input[name="quantity[]"]'))
+  const models = Array.from(document.querySelectorAll('input[name="modelNumber[]"]'));
+
+  const rows = models.map((input, i) => {
+   
+    const qty = quantities[i]?.value.trim() || '1';
+     const model = input.value.trim();
+    if (!model) return '';
+    return `<tr>
+      
+      <td>${qty}</td>
+      <td>${model}</td>
+
+    </tr>`;
+  }).filter(Boolean).join('');
+
+  return `<table border="1" cellpadding="5" cellspacing="0" style="border-collapse:collapse;width:100%;font-family:Arial,sans-serif;">
+    <thead style="background-color:#f2f2f2;">
+      <tr>
+
+       
+        <th>Quantity</th>
+         <th>Model Number</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      ${rows}
+    </tbody>
+  </table>`;
+})();
+
+
+
+   const data = {
+  yourName: form.yourName.value,
+  yourEmail: form.yourEmail.value,
+  projectName: form.projectName.value,
+  registrationReason: form.registrationReason.value,
+  approximateValue: form.approximateValue.value,
+  endUserCompany: form.endUserCompany.value,
+  endUserContact: form.endUserContact.value,
+  endUserPhone: form.endUserPhone.value,
+  endUserEmail: form.endUserEmail.value,
+  endUserCity: form.endUserCity.value,
+  contractorCompany: form.contractorCompany.value,
+  contractorContact: form.contractorContact.value,
+  contractorPhone: form.contractorPhone.value,
+  contractorEmail: form.contractorEmail.value,
+  contractorCity: form.contractorCity.value,
+  partnerContact: form.partnerContact.value,
+  partnerPhone: form.partnerPhone.value,
+  partnerCity: form.partnerCity.value,
+OrderDate: form.OrderDate.value,
+
+  brands: Array.from(document.querySelectorAll('input[name="brands"]:checked')).map(cb => cb.value).join(', '),
+ models_table: models_table,
+  projectDescription: form.projectDescription.value
+};
+console.log(data);
+  // Build HTML table for email
+ 
+
+  
+
+    // Send email using EmailJS
+    emailjs.send("service_dpvfggs", "template_elqtxkm", data)
+      .then(function (response) {
+    console.log('SUCCESS!', response);
+    messageDiv.innerHTML = '✅ Formulario enviado correctamente. Correo electrónico enviado.';
+    messageDiv.className = 'message success';
+    messageDiv.style.display = 'block';
+    form.reset();
+
+    // Reset model table to single empty row
+    modelTableBody.innerHTML = `
+      <tr>
+        <td><input type="number" name="quantity[]" min="1"></td>
+            <td><input type="text" name="modelNumber[]" list="modelList" required></td>
+
+        <td><button type="button" class="remove-row-btn"><span class="me-2"><i class="fa fa fa-trash" ></i></span>Remove</button></td>
+      </tr>
+    `;
+  })
+  .catch(function (error) {
+    console.log('FAILED...', error);
+    messageDiv.innerHTML = '❌ No se pudo enviar el formulario. Error: ' + (error.text || error);
+    messageDiv.className = 'message error';
+    messageDiv.style.display = 'block';
+  });
+
+        form.reset();
+
+        // Reset model table to single empty row
+        modelTableBody.innerHTML = `
+          <tr>
+            <td><input type="text" name="modelNumber[]" required></td>
+            <td><input type="number" name="quantity[]" min="1"></td>
+            <td><button type="button" class="remove-row-btn"><span class="me-2"><i class="fa fa fa-trash" ></i></span>Remove</button></td>
+          </tr>
+        `;
+      })
+      
+  });
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html> 
