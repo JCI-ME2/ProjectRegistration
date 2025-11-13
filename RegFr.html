@@ -359,6 +359,27 @@ textarea::placeholder {
 
     //send Email and validate
 emailjs.init("4kquBdqRHewuXnRBz");
+async function loadModelList() {
+    try{
+        const response = await fetch('model.json');
+        const data = await response.json();
+        const modelValues = data.map(item=>item["E-SPE-V8"]).filter(Boolean);
+        const dataList = document.getElementById('modelList');
+        dataList.innerHTML='';
+        modelValues.forEach(model=>{
+            const option =document.createElement('option');
+            option.value=model;
+            dataList.appendChild(option);
+        });
+    }catch (error){
+        console.error('Failed to load models',error);
+    }
+
+    
+}
+window.addEventListener('DOMContentLoaded', loadModelList); 
+
+  
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('projectForm');
   const messageDiv = document.getElementById('message');
@@ -498,27 +519,7 @@ OrderDate: form.OrderDate.value,
   projectDescription: form.projectDescription.value
 };
 console.log(data);
-    async function loadModelList() {
-    try{
-        const response = await fetch('model.json');
-        const data = await response.json();
-        const modelValues = data.map(item=>item["E-SPE-V8"]).filter(Boolean);
-        const dataList = document.getElementById('modelList');
-        dataList.innerHTML='';
-        modelValues.forEach(model=>{
-            const option =document.createElement('option');
-            option.value=model;
-            dataList.appendChild(option);
-        });
-    }catch (error){
-        console.error('Failed to load models',error);
-    }
-
     
-}
-window.addEventListener('DOMContentLoaded', loadModelList); 
-
-  
 
     // Send email using EmailJS
     emailjs.send("service_dpvfggs", "template_elqtxkm", data)
