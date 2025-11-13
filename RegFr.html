@@ -411,26 +411,26 @@ document.addEventListener('DOMContentLoaded', function () {
     // Validate at least one checkbox for 'brands' (if required)
     if (document.querySelectorAll('input[name="brands"]:checked').length === 0) {
       valid = false;
-      emptyFields.push('Brands');
+      emptyFields.push('Marques');
     }
 
     // Validate radio buttons (registrationReason)
     if (!document.querySelector('input[name="registrationReason"]:checked')) {
       valid = false;
-      emptyFields.push('Registration Reason');
+      emptyFields.push('Motif de l’inscription');
     }
 
     //validation Estimated Date
         if (!document.querySelector('input[name="OrderDate"]:checked')) {
       valid = false;
-      emptyFields.push('Estimated Order Date');
+      emptyFields.push('Date de commande estimée');
     }
 
 
    
 
     if (!valid) {
-      messageDiv.innerHTML = `⚠️ Please fill in the following required fields:<br>- ${emptyFields.join('<br>- ')}`;
+      messageDiv.innerHTML = `⚠️ Veuillez remplir les champs obligatoires suivants :<br>- ${emptyFields.join('<br>- ')}`;
       messageDiv.className = 'message error';
       messageDiv.style.display = 'block';
       return;
