@@ -498,8 +498,25 @@ OrderDate: form.OrderDate.value,
   projectDescription: form.projectDescription.value
 };
 console.log(data);
-  // Build HTML table for email
- 
+    async function loadModelList() {
+    try{
+        const response = await fetch('model.json');
+        const data = await response.json();
+        const modelValues = data.map(item=>item["E-SPE-V8"]).filter(Boolean);
+        const dataList = document.getElementById('modelList');
+        dataList.innerHTML='';
+        modelValues.forEach(model=>{
+            const option =document.createElement('option');
+            option.value=model;
+            dataList.appendChild(option);
+        });
+    }catch (error){
+        console.error('Failed to load models',error);
+    }
+
+    
+}
+window.addEventListener('DOMContentLoaded', loadModelList); 
 
   
 
