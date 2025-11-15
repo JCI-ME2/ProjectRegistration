@@ -363,7 +363,7 @@ async function loadModelList() {
     try{
         const response = await fetch('model.json');
         const data = await response.json();
-        const modelValues = data.map(item=>item["E-SPE-V8"]).filter(Boolean);
+        const modelValues = data.map(item=>item["SSVR3-08-G"]).filter(Boolean);
         const dataList = document.getElementById('modelList');
         dataList.innerHTML='';
         modelValues.forEach(model=>{
