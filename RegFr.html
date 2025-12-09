@@ -318,13 +318,21 @@ const models_table = `
 
         
 
-    
+       var refNumber = 'FR'+
+                    (new Date().getDate())+
+                    (new Date().getMonth()+1)+
+                    (new Date().getHours())+
+                    (new Date().getMinutes())+
+                    (new Date().getSeconds());
+
+        
 
         // Collect form data
         const data = {
             yourName: form.yourName.value,
             yourEmail: form.yourEmail.value,
             projectName: form.projectName.value,
+            refNumber:refNumber,  
             registrationReason: form.registrationReason.value,
             endUserCompany: form.endUserCompany.value,
             endUserContact: form.endUserContact.value,
