@@ -217,7 +217,7 @@
                     <table id="modelTable">
                         <thead>
                             <tr>
-
+                                 <th class="seq-num">#</th>
                                 <th  class="qty">Quantity</th>
                                 <th class="model">Model Number</th>
                                 <th class="desc">Description</th>
@@ -226,7 +226,7 @@
                         </thead>
                         <tbody>
                             <tr>
-
+                                <td class="seq-num">1</td>
                                 <td class="qty"><input type="number" name="quantity[]" min="1" required></td>
                                 <td class="model"><input type="text" name="modelNumber[]" list="modelList" class="model-input" required></td>
                                 
@@ -313,19 +313,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load model and sync existing rows
     loadModels().then(syncAllRows);
-
+ 
     // Add new model row dynamically
-    document.getElementById('addModelRow').addEventListener('click', () => {
-        const newRow = document.createElement('tr');
-        newRow.innerHTML = `
-            <td><input type="number" name="quantity[]" min="1" required></td>
-            <td><input type="text" name="modelNumber[]" list="modelList" class="model-input" required></td>
-            <td><input type="text" name="description[]" list="descList" class="desc-input" required></td>
-            <td><button type="button" class="remove-row-btn"><i class="fa fa-trash"></i> Remove</button></td>
-        `;
-        modelTableBody.appendChild(newRow);
-        applySync(newRow);
-    });
+       const tableBody = document.querySelector('#modelTable tbody');
+        const addRowBtn = document.getElementById('addModelRow');
+
+    // Update sequence numbers
+        function updateSequence() {
+        const rows = tableBody.querySelectorAll('tr');
+        rows.forEach((row, index) => {
+            row.querySelector('.seq-num').textContent = index + 1;
+        });
+        }
+
+
+  addRowBtn.addEventListener('click', () => {
+  const rowCount = tableBody.rows.length + 1;
+
+  const newRow = document.createElement('tr');
+  newRow.innerHTML = `
+    <td class="seq-num">${rowCount}</td>
+    <td class="qty">
+      <input type="number" name="quantity[]" min="1" required>
+    </td>
+
+    <td class="model">
+      <input type="text" name="modelNumber[]" list="modelList" class="model-input" required>
+    </td>
+    <td class="desc">
+      <input type="text" name="description[]" list="descList" class="form-control desc-input" required>
+    </td>
+    <td>
+      <button type="button" class="remove-row-btn">
+        <span class="me-2"><i class="fa fa-trash"></i></span>Remove
+      </button>
+    </td>
+  `;
+
+  tableBody.appendChild(newRow);
+    // ✅ APPLY MODEL ↔ DESC SYNC TO NEW ROW
+     applySync(newRow);
+  updateSequence();
+});
 
     // Remove model row
     modelTableBody.addEventListener('click', e => {
@@ -383,29 +412,35 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Collect model rows
+     
        // Collect model rows as HTML table
-const models_table = `
-<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">
-    <thead>
+       const models_table = `
+<table border="1" cellpadding="5" cellspacing="0"
+       style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Quantity</th>
+      <th>Model</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    ${Array.from(modelTableBody.rows).map((tr, index) => {
+      const qty   = tr.querySelector('input[name="quantity[]"]').value || '';
+      const model = tr.querySelector('input[name="modelNumber[]"]').value || '';
+      const desc  = tr.querySelector('input[name="description[]"]').value || '';
+
+      return `
         <tr>
-            <th>Quantity</th>
-            <th>Model</th>
-            <th>Description</th>
+          <td>${index + 1}</td>
+          <td>${qty}</td>
+          <td>${model}</td>
+          <td>${desc}</td>
         </tr>
-    </thead>
-    <tbody>
-        ${Array.from(modelTableBody.rows).map(tr => {
-            const qty = tr.querySelector('input[name="quantity[]"]').value || '';
-            const model = tr.querySelector('input[name="modelNumber[]"]').value || '';
-            const desc = tr.querySelector('input[name="description[]"]').value || '';
-            return `<tr>
-                        <td>${qty}</td>
-                        <td>${model}</td>
-                        <td>${desc}</td>
-                    </tr>`;
-        }).join('')}
-    </tbody>
+      `;
+    }).join('')}
+  </tbody>
 </table>`;
 
 
@@ -456,6 +491,8 @@ const models_table = `
             // Reset model table
             modelTableBody.innerHTML = `
                 <tr>
+                   <td class="seq-num" >1</td>
+
                     <td><input type="number" name="quantity[]" min="1" required></td>
                     <td><input type="text" name="modelNumber[]" list="modelList" class="model-input" required></td>
                     <td><input type="text" name="description[]" list="descList" class="desc-input" required></td>
