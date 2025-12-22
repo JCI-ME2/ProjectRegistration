@@ -248,9 +248,26 @@
             
         </form>
     </div>
+   <div id="otpModal" class="otp-overlay">
+    <div class="otp-box">
+        <h6 class="text-danger">Email Verification</h6>
+        <p>Please Enter Code sent to your Email <span id="emailSpan"></span></p>
+        <input type="text" id="otpInput" class="form-control" placeholder="">
+             <div id="otpMessage" class="message" style="display:none;"></div>
+        <button class="btn btn-primary mt-3 w-100" onclick="verifyOtp()">Verify</button>
+    </div>
+</div>
+
+
    
 <script>
 let items = [];
+let generatedOtp = null;
+let otpExpireTime = null;
+let pendingFormData = null;
+let form;
+let messageDiv;
+let modelTableBody;
 
 // Load JSON model asynchronously
 async function loadModels() {
@@ -307,9 +324,9 @@ function syncAllRows() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const modelTableBody = document.querySelector('#modelTable tbody');
-    const form = document.getElementById('projectForm');
-    const messageDiv = document.getElementById('message');
+     modelTableBody = document.querySelector('#modelTable tbody');
+     form = document.getElementById('projectForm');
+     messageDiv = document.getElementById('message');
 
     // Load model and sync existing rows
     loadModels().then(syncAllRows);
@@ -415,9 +432,9 @@ document.addEventListener('DOMContentLoaded', () => {
      
        // Collect model rows as HTML table
        const models_table = `
-<table border="1" cellpadding="5" cellspacing="0"
-       style="border-collapse: collapse; width: 100%;">
-  <thead>
+    <table border="1" cellpadding="5" cellspacing="0"
+        style="border-collapse: collapse; width: 100%;">
+    <thead>
     <tr>
       <th>#</th>
       <th>Quantity</th>
@@ -482,32 +499,90 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            await emailjs.send("service_dpvfggs", "template_elqtxkm", data);
-            messageDiv.innerHTML = '✅ Form submitted successfully!';
-            messageDiv.className = 'message success';
-            messageDiv.style.display = 'block';
-            form.reset();
+                generatedOtp = Math.floor(100000+Math.random()*900000).toString();
+                otpExpireTime=Date.now()+5*60*1000; // 5 miniutes
+                pendingFormData=data;
+                await emailjs.send("service_dpvfggs","template_og68dyn",{
+                    email:form.yourEmail.value,
+                    otp:generatedOtp,
+                   
+                });
+            //show otp section
+              document.getElementById("emailSpan").innerHTML = form.yourEmail.value;
+                              document.getElementById("otpModal").style.display = "flex";            
 
-            // Reset model table
-            modelTableBody.innerHTML = `
-                <tr>
-                   <td class="seq-num" >1</td>
-
-                    <td><input type="number" name="quantity[]" min="1" required></td>
-                    <td><input type="text" name="modelNumber[]" list="modelList" class="model-input" required></td>
-                    <td><input type="text" name="description[]" list="descList" class="desc-input" required></td>
-                    <td><button type="button" class="remove-row-btn"><i class="fa fa-trash"></i> Remove</button></td>
-                </tr>
-            `;
-            syncAllRows();
-        } catch (err) {
-            console.error(err);
-            messageDiv.innerHTML = '❌ Failed to submit form. ' + (err.text || '');
-            messageDiv.className = 'message error';
-            messageDiv.style.display = 'block';
         }
-    });
-});
+        catch (err) {
+                        console.error(err);
+                        messageDiv.innerHTML = '❌ Failed to send verification code.';
+                        messageDiv.className = 'message error';
+                        messageDiv.style.display = 'block';
+                }
+            });
+        });
+
+           
+    
+</script>
+
+<script>
+async function verifyOtp() {
+    const enteredOtp = document.getElementById("otpInput").value;
+    const otpMessage = document.getElementById("otpMessage");
+
+    if (Date.now() > otpExpireTime) {
+         otpMessage.innerHTML = 'Verifiction Code is Expired!';
+        otpMessage.className = 'message error';
+        otpMessage.style.display = 'block';
+        return;
+    }
+
+    if (enteredOtp !== generatedOtp) {
+        otpMessage.innerHTML = 'Invalid Verifiction Code!';
+        otpMessage.className = 'message error';
+        otpMessage.style.display = 'block';
+        return;
+    }
+
+    try {
+        await emailjs.send(
+            "service_dpvfggs",
+            "template_elqtxkm",
+            pendingFormData
+        );
+        document.getElementById("otpInput").innerHTML = '';
+        document.getElementById("emailSpan").innerHTML = '';
+
+        document.getElementById("otpModal").style.display = "none";
+
+        messageDiv.innerHTML = '✅ Form submitted successfully!';
+        messageDiv.className = 'message success';
+        messageDiv.style.display = 'block';
+
+        form.reset();
+
+        modelTableBody.innerHTML = `
+            <tr>
+                <td class="seq-num">1</td>
+                <td><input type="number" name="quantity[]" min="1" required></td>
+                <td><input type="text" name="modelNumber[]" list="modelList" class="model-input" required></td>
+                <td><input type="text" name="description[]" list="descList" class="desc-input" required></td>
+                <td>
+                    <button type="button" class="remove-row-btn">
+                        <i class="fa fa-trash"></i> Remove
+                    </button>
+                </td>
+            </tr>
+        `;
+        syncAllRows();
+
+    } catch (err) {
+        console.error(err);
+        messageDiv.innerHTML = '❌ Failed to submit form.';
+        messageDiv.className = 'message error';
+        messageDiv.style.display = 'block';
+    }
+}
 </script>
 
 

@@ -153,11 +153,26 @@
         <div id="message" class="message" style="display:none;"></div>
         <button type="submit" class="submit-btn">Soumettre l’Enregistrement</button>
     </form>
+     <div id="otpModal" class="otp-overlay">
+        <div class="otp-box">
+            <h6 class="text-danger">Vérification par e-mail</h6>
+            <p>Veuillez saisir le code qui vous a été envoyé par courriel. <span id="emailSpan"></span></p>
+            <input type="text" id="otpInput" class="form-control" placeholder="">
+                <div id="otpMessage" class="message" style="display:none;"></div>
+            <button class="btn btn-primary mt-3 w-100" onclick="verifyOtp()">Vérifier</button>
+        </div>
+</div>
 </div>
 
 
 <script>
 let items = [];
+let generatedOtp = null;
+let otpExpireTime = null;
+let pendingFormData = null;
+let form;
+let messageDiv;
+let modelTableBody;
 
 // Load JSON model asynchronously
 async function loadModels() {
@@ -214,14 +229,14 @@ function syncAllRows() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const modelTableBody = document.querySelector('#modelTable tbody');
-    const form = document.getElementById('projectForm');
-    const messageDiv = document.getElementById('message');
+     modelTableBody = document.querySelector('#modelTable tbody');
+     form = document.getElementById('projectForm');
+     messageDiv = document.getElementById('message');
 
     // Load model and sync existing rows
     loadModels().then(syncAllRows);
 
-    // Add new model row dynamically
+    
      // Add new model row dynamically
        const tableBody = document.querySelector('#modelTable tbody');
         const addRowBtn = document.getElementById('addModelRow');
@@ -322,7 +337,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Collect model rows
        // Collect model rows as HTML table
 const models_table = `
 <table border="1" cellpadding="5" cellspacing="0"
@@ -390,8 +404,63 @@ const models_table = `
             projectDescription: form.projectDescription.value
         };
 
-        try {
-            await emailjs.send("service_dpvfggs", "template_elqtxkm", data);
+       
+           
+    try {
+                generatedOtp = Math.floor(100000+Math.random()*900000).toString();
+                otpExpireTime=Date.now()+5*60*1000; // 5 miniutes
+                pendingFormData=data;
+                await emailjs.send("service_dpvfggs","template_og68dyn",{
+                    email:form.yourEmail.value,
+                    otp:generatedOtp,
+                   
+                });
+            //show otp section
+              document.getElementById("emailSpan").innerHTML = form.yourEmail.value;
+                              document.getElementById("otpModal").style.display = "flex";            
+
+        }
+        catch (err) {
+                        console.error(err);
+                        messageDiv.innerHTML = "❌ Échec de l'envoi du code de vérification.";
+                        messageDiv.className = 'message error';
+                        messageDiv.style.display = 'block';
+                }
+            });
+});
+</script>
+
+
+<script>
+async function verifyOtp() {
+    const enteredOtp = document.getElementById("otpInput").value;
+    const otpMessage = document.getElementById("otpMessage");
+
+    if (Date.now() > otpExpireTime) {
+         otpMessage.innerHTML = 'Le code de vérification a expiré.!';
+        otpMessage.className = 'message error';
+        otpMessage.style.display = 'block';
+        return;
+    }
+
+    if (enteredOtp !== generatedOtp) {
+        otpMessage.innerHTML = 'Code de vérification invalide!';
+        otpMessage.className = 'message error';
+        otpMessage.style.display = 'block';
+        return;
+    }
+
+    try {
+        await emailjs.send(
+            "service_dpvfggs",
+            "template_elqtxkm",
+            pendingFormData
+        );
+        document.getElementById("otpInput").innerHTML = '';
+        document.getElementById("emailSpan").innerHTML = '';
+
+        document.getElementById("otpModal").style.display = "none";
+
             messageDiv.innerHTML = '✅ Formulaire soumis avec succès !';
             messageDiv.className = 'message success';
             messageDiv.style.display = 'block';
@@ -415,8 +484,7 @@ const models_table = `
             messageDiv.className = 'message error';
             messageDiv.style.display = 'block';
         }
-    });
-});
+}
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>

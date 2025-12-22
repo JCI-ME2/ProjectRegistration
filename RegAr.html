@@ -223,7 +223,7 @@ th, td {
             <!-- Project Details Section -->
             <h4>تفاصيل المشروع</h4>
           
-            <div class="form-section">
+            <class class="form-section">
                 <div class="form-group">
                     <label for="projectDescription">وصف المشروع</label>
                     <textarea id="projectDescription" name="projectDescription" rows="4"></textarea>
@@ -262,18 +262,34 @@ th, td {
                     <datalist id="descList"></datalist>
                     <button type="button" class="add-row-btn" id="addModelRow"><span class="me-2"><i class="fa fa-plus" ></i></span> إضافة موديل</button>
                 </div>
-                
+                <div id="message" class="message" style="display:none;"></div>
+
+                <button type="submit" class="submit-btn">ارسال النموذج</button>
+            </form>
                
             </div>
-             <div id="message" class="message" style="display:none;"></div>
-            <button type="submit" class="submit-btn">ارسال النموذج</button>
+              <div id="otpModal" class="otp-overlay">
+                <div class="otp-box">
+                <h6 class="text-danger">التحقق من البريد الالكتروني</h6>
+                <p>من فضلك ادخل رمز التحقق الذي تم ارساله الى الايميل<span id="emailSpan"></span></p>
+                <input type="text" id="otpInput" class="form-control" placeholder="  ">
+                    <div id="otpMessage" class="message" style="display:none;"></div>
+                <button class="btn btn-primary mt-3 w-100" onclick="verifyOtp()">تحقق</button>
+             </div>
             
-        </form>
+       
     </div>
    
    
 <script>
 let items = [];
+let generatedOtp = null;
+let otpExpireTime = null;
+let pendingFormData = null;
+let form;
+let messageDiv;
+let modelTableBody;
+
 
 // Load JSON model asynchronously
 async function loadModels() {
@@ -330,9 +346,9 @@ function syncAllRows() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const modelTableBody = document.querySelector('#modelTable tbody');
-    const form = document.getElementById('projectForm');
-    const messageDiv = document.getElementById('message');
+     modelTableBody = document.querySelector('#modelTable tbody');
+     form = document.getElementById('projectForm');
+     messageDiv = document.getElementById('message');
 
     // Load model and sync existing rows
     loadModels().then(syncAllRows);
@@ -393,7 +409,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Form submission using EmailJS
-    emailjs.init("4kquBdqRHewuXnRBz"); // Replace with your EmailJS ID
+    emailjs.init("4kquBdqRHewuXnRBz"); 
     form.addEventListener('submit', async e => {
         e.preventDefault();
         messageDiv.style.display = 'none';
@@ -507,7 +523,63 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            await emailjs.send("service_dpvfggs", "template_elqtxkm", data);
+                generatedOtp = Math.floor(100000+Math.random()*900000).toString();
+                otpExpireTime=Date.now()+5*60*1000; // 5 miniutes
+                pendingFormData=data;
+                await emailjs.send("service_dpvfggs","template_og68dyn",{
+                    email:form.yourEmail.value,
+                    otp:generatedOtp,
+                   
+                });
+            //show otp section
+              document.getElementById("emailSpan").innerHTML = form.yourEmail.value;
+                              document.getElementById("otpModal").style.display = "flex";            
+
+        }
+        catch (err){
+                        console.error(err);
+                        messageDiv.innerHTML = '❌ فشل في ارسال رمز التحقق';
+                        messageDiv.className = 'message error';
+                        messageDiv.style.display = 'block';
+                }
+    });
+
+});
+</script>
+
+
+<script>
+async function verifyOtp() {
+    const enteredOtp = document.getElementById("otpInput").value;
+    const otpMessage = document.getElementById("otpMessage");
+
+    if (Date.now() > otpExpireTime) {
+         otpMessage.innerHTML = 'انتهت صلاحية رمز التحقق';
+        otpMessage.className = 'message error';
+        otpMessage.style.display = 'block';
+        return;
+    }
+
+    if (enteredOtp !== generatedOtp) {
+        otpMessage.innerHTML = 'رمز التحقق غير صحيح';
+        otpMessage.className = 'message error';
+        otpMessage.style.display = 'block';
+        return;
+    }
+
+    try {
+        await emailjs.send(
+            "service_dpvfggs",
+            "template_elqtxkm",
+            pendingFormData
+        );
+        document.getElementById("otpInput").innerHTML = '';
+        document.getElementById("emailSpan").innerHTML = '';
+
+        document.getElementById("otpModal").style.display = "none";
+
+       
+       
             messageDiv.innerHTML = '✅ تم إرسال النموذج بنجاح! تم إرسال البريد الإلكتروني.';
             messageDiv.className = 'message success';
             messageDiv.style.display = 'block';
@@ -516,7 +588,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // Reset model table
             modelTableBody.innerHTML = `
                 <tr>
-                    <td class="seq-num" >1</td>
 
                     <td><input type="number" name="quantity[]" min="1" required></td>
                     <td><input type="text" name="modelNumber[]" list="modelList" class="model-input" required></td>
@@ -528,14 +599,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 </tr>
             `;
             syncAllRows();
-        } catch (err) {
+            }catch (err) {
             console.error(err);
             messageDiv.innerHTML = '❌ فشل إرسال النموذج. خطأ: ' + (err.text || '');
             messageDiv.className = 'message error';
             messageDiv.style.display = 'block';
         }
-    });
-});
+}
 </script>
 
 
